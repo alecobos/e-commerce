@@ -8,6 +8,10 @@ const ready = () => console.log("server ready on port " + port);
 //obligo al sercidor a usar la funcionalidad urlencoder de express
 //para habilitar la lectura de datos complejos en la url (parametros y consultas)
 server.use(express.urlencoded({ extended: true }));
+//obligo al servidor a usar la funcionalidad de recepcion y emisión del formato json para poder recibir objetos en la pripiedad req.body y además se 
+//aplica para poder recibir onbetos en la propiedad req.body y además se aplica json en toda la aplicación
+server.use(express.json())
+
 
 server.listen(port, ready);
 
