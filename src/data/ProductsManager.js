@@ -39,7 +39,6 @@ class ProductsManager {
     try {
       const all = await this.readAll();
       const one = all.find((each) => each.id === id);
-      //console.log(one);
       return one;
     } catch (error) {
       console.log(error);
@@ -54,6 +53,39 @@ class ProductsManager {
       const stringAll = JSON.stringify(all, null, 2);
       await fs.promises.writeFile(this.path, stringAll);
       return data.id;
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  }
+
+  async update(id, newData) {
+    try {
+      const all = await this.readAll();
+      const index = all.findIndex((product) => product.id === id);
+      if (index === -1) {
+        return null;
+      }
+      all[index] = { ...all[index], ...newData };
+      const stringAll = JSON.stringify(all, null, 2);
+      await fs.promises.writeFile(this.path, stringAll);
+      return all[index];
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  }
+
+  async delete(id) {
+    try {
+      const all = await this.readAll();
+      const filteredProducts = all.filter((product) => product.id !== id);
+      if (all.length === filteredProducts.length) {
+        return null
+      }
+      const stringAll = JSON.stringify(filteredProducts, null, 2);
+      await fs.promises.writeFile(this.path, stringAll);
+      return "PRODUCT DELETED";
     } catch (error) {
       console.log(error);
       throw error;

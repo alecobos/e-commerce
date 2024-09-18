@@ -2,21 +2,6 @@
   {
     "title": "prod",
     "price": 100,
-    "id": "86f4e73834e559069672b92a"
-  },
-  {
-    "title": "prod",
-    "price": 100,
-    "id": "cb7a368e2516836752d0e7e5"
-  },
-  {
-    "title": "prod",
-    "price": 100,
-    "id": "f2c7b02a2da230f5962293b3"
-  },
-  {
-    "title": "prod",
-    "price": 100,
     "id": "5eeeea40b951ff85c843288c"
   },
   {
@@ -177,5 +162,57 @@
     "category": "none",
     "supplier": "none",
     "id": "3de90bf8bc32a06f31fa908f"
+  },
+  {
+    "title": "product from postman",
+    "price": 1000,
+    "stock": 10,
+    "id": "98752dcc652f8bd0dc7e3ced",
+    "category": "computers"
+  },
+  {
+    "title": "netbook",
+    "price": 1450,
+    "stock": 13,
+    "id": "5fbcf835236970b9bd548cbe",
+    "category": "computers"
+  },
+  {
+    "title": "producto nuevosss",
+    "price": 1450,
+    "stock": 1,
+    "id": "89b389b02aeae56806e2883c"
+  },
+  {
+    "title": "producto reciente",
+    "price": 1,
+    "category": "other",
+    "photo": "https://www.blogdelfotografo.com/wp-content/uploads/2020/12/producto_fondo_negro.webp",
+    "stock": 1,
+    "id": "7376dfd34e31971779767979"
+  },
+  {
+    "title": "producto mas reciente",
+    "price": 20,
+    "category": "jean",
+    "photo": "https://www.blogdelfotografo.com/wp-content/uploads/2020/12/producto_fondo_negro.webp",
+    "stock": 15,
+    "id": "da83b75fa00d0114d9d129d6"
+  },
+  {
+    "title": "keyboard",
+    "price": 20,
+    "category": "devices",
+    "photo": "https://www.blogdelfotografo.com/wp-content/uploads/2020/12/producto_fondo_negro.webp",
+    "stock": 12,
+    "id": "2d59f0b688efe4512263273d"
+  },
+  {
+    "title": "keyboard",
+    "price": 20,
+    "category": "devices",
+    "photo": "https://www.blogdelfotografo.com/wp-content/uploads/2020/12/producto_fondo_negro.webp",
+    "stock": 12,
+    "id": "05e04830dd4927bd7f9e1a6d"
   }
 ]
