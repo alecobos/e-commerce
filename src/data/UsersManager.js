@@ -15,19 +15,11 @@ class UsersManager {
       console.log("file already exists");
     }
   }
-  async readAll(rol) {
+  async readAll() {
     try {
       const data = await fs.promises.readFile(this.path, "utf-8");
       const parseData = JSON.parse(data);
-      //console.log(parseData);
-      if (rol) {
-        const filteredData = parseData.filter(
-          (each) => each.rol === rol
-        );
-        return filteredData;
-      } else {
-        return parseData;
-      }
+      return parseData;
     } catch (error) {
       console.log(error);
       throw error;
@@ -83,23 +75,6 @@ class UsersManager {
       throw error;
     }
   }
-  
-  // async update(id, newData) {
-  //   try {
-  //     const all = await this.readAll();
-  //     const index = all.findIndex((user) => user.id === id);
-  //     if (index === -1) {
-  //       return null;
-  //     }
-  //     all[index] = { ...all[index], ...newData };
-  //     const stringAll = JSON.stringify(all, null, 2);
-  //     await fs.promises.writeFile(this.path, stringAll);
-  //     return all[index];
-  //   } catch (error) {
-  //     console.log(error);
-  //     throw error;
-  //   }
-  // }
 
   async delete(id) {
     try {

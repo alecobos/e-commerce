@@ -1,13 +1,5 @@
 [
   {
-    "email": "ale@ale.com",
-    "password": "12345678",
-    "userName": "ale",
-    "rol": 2,
-    "photo": "https://i.pinimg.com/474x/5a/1b/1e/5a1b1e32639c6210416804dc7a93ef8e.jpg",
-    "id": "b9f33a3531a517f4d31966dd"
-  },
-  {
     "email": "mica@card.com",
     "password": "asdfg",
     "userName": "mica",
@@ -23,17 +15,25 @@
     "id": "797570cc8db3cd0ccefa7062"
   },
   {
-    "userName": "mica",
-    "rol": 0,
+    "userName": "mica3",
+    "rol": 3,
     "photo": "https://i.pinimg.com/474x/5a/1b/1e/5a1b1e32639c6210416804dc7a93ef8e.jpg",
     "id": "0908f3bf6924dcadfb1949b1"
   },
   {
     "email": "anto@cob.com",
     "password": "asdfg123",
-    "userName": "anto",
-    "rol": 0,
+    "userName": "mica3",
+    "rol": 1,
     "photo": "https://i.pinimg.com/474x/5a/1b/1e/5a1b1e32639c6210416804dc7a93ef8e.jpg",
     "id": "d279f7c2fcedf73e5186d8ae"
+  },
+  {
+    "email": "ale@cob.com",
+    "password": "contrasenia",
+    "userName": "alec",
+    "rol": 2,
+    "photo": "https://i.pinimg.com/474x/5a/1b/1e/5a1b1e32639c6210416804dc7a93ef8e.jpg",
+    "id": "d4f72859d4b3ff8894bcd50f"
   }
 ]

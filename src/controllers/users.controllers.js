@@ -2,13 +2,8 @@ import usersManager from "../data/UsersManager.js";
 
 async function getAllUsers(req, res, next) {
   try {
-    let { rol } = req.query;
     let response;
-    if (!rol) {
-      response = await usersManager.readAll();
-    } else {
-      response = await usersManager.readAll(rol);
-    }
+    response = await usersManager.readAll();
     if (response.length > 0) {
       return res.status(200).json({ message: "USERS READ", response });
     } else {
@@ -62,24 +57,6 @@ async function createUser(req, res, next) {
     return next(error);
   }
 }
-
-// async function updateUser(req, res, next) {
-//   try {
-//     const { uid } = req.params;
-//     const newData = req.body;
-//     const responseManager = await usersManager.update(uid, newData);
-//     if (!responseManager) {
-//       const error = new Error(`User with id ${uid} not found`);
-//       error.statusCode = 404;
-//       throw error;
-//     }
-//     return res
-//       .status(200)
-//       .json({ message: "USER UPDATED", response: responseManager });
-//   } catch (error) {
-//     return next(error);
-//   }
-// }
 
 async function updateUser(req, res, next) {
   try {

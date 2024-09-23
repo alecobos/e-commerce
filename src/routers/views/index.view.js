@@ -7,6 +7,6 @@ const viewRouter = Router();
 
 viewRouter.use("/products", productsViewRouter);
 viewRouter.use("/users", usersViewRouter);
-viewRouter.use("/carts", cartsViewRouter)
+viewRouter.use("/carts", cartsViewRouter);
 
 export default viewRouter;

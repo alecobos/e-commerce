@@ -1,218 +1,322 @@
 [
   {
-    "title": "prod",
-    "price": 100,
-    "id": "5eeeea40b951ff85c843288c"
-  },
-  {
-    "title": "prod",
-    "price": 100,
-    "id": "f0c4f01e6e0dd58779ad7502"
-  },
-  {
-    "title": "prod",
-    "price": 100,
-    "id": "8b21d28d92b20a2ca6bcad41"
-  },
-  {
-    "title": "prod",
-    "price": 100,
-    "id": "91f14c2de7024ae14880b662"
-  },
-  {
-    "title": "prod",
-    "price": 100,
-    "id": "d5aaa3e065a0396b3d738935"
-  },
-  {
-    "title": "prod",
-    "price": 100,
-    "id": "6fff6208a23a5a766eab5112"
-  },
-  {
-    "title": "prod",
-    "price": 100,
-    "id": "a8a9b0b5507c8bc56043b369"
-  },
-  {
-    "title": "t-shirt",
-    "price": "10",
-    "quantity": "2000",
-    "id": "1d53859e70ee8a370189c496"
-  },
-  {
-    "title": "short",
-    "price": "100",
-    "quantity": "200",
-    "id": "051e5950b69b1e5899787ca2"
-  },
-  {
-    "title": "zapato",
-    "price": "100",
-    "quantity": "200",
-    "id": "33f3f0656e65c8b39816e2fa"
-  },
-  {
-    "title": "zapato",
-    "price": "100",
-    "quantity": "200",
-    "category": "shoes",
-    "id": "a707b4aabca198bfb8a7dbf0"
-  },
-  {
-    "title": "zapatillas",
-    "price": "100",
-    "quantity": "200",
-    "category": "shoes",
-    "id": "3ff63b23b1c7c1b38261576e"
-  },
-  {
-    "title": "zapatillas",
-    "price": "100",
-    "quantity": "200",
-    "category": "shoes",
-    "supplier": "nike",
-    "id": "695b020be9b40729abb2b1e4"
-  },
-  {
-    "title": "zapatillas",
-    "price": "100",
-    "quantity": "200",
-    "supplier": "nike",
-    "id": "224e317837681c52bc9a1e4e"
-  },
-  {
-    "title": "mouse",
-    "price": "100",
-    "quantity": "200",
-    "category": "computers",
-    "supplier": "nike",
-    "id": "465f2244607834fe202c54dc"
-  },
-  {
-    "title": "mouse",
-    "price": "100",
-    "quantity": "200",
-    "category": "none",
-    "supplier": "none",
-    "id": "ff586bcdb1023818e2d4d659"
-  },
-  {
-    "title": "mouse",
-    "price": "100",
-    "quantity": "200",
-    "category": "none",
-    "supplier": "logitech",
-    "id": "8c76442e0c0ba713e2bf25dd"
-  },
-  {
-    "title": "mouse",
-    "price": "100",
-    "quantity": "200",
-    "category": "computers",
-    "supplier": "none",
-    "id": "55ab3870f46690df2618e6f4"
-  },
-  {
-    "title": "mouse",
-    "price": "100",
-    "quantity": "200",
-    "category": "computers",
-    "supplier": "sfx",
-    "id": "109add42dd56cc936d1ea570"
-  },
-  {
-    "title": "mouse",
-    "price": "100",
-    "quantity": "200",
-    "id": "55c19a3598d09c7cc1e048b0"
-  },
-  {
-    "title": "t-shirt",
-    "price": "15",
-    "quantity": "260",
-    "id": "5f23bf9a71c65ab9f7dd0797"
-  },
-  {
-    "title": "cap",
-    "price": "150",
-    "quantity": "22",
-    "category": "accesorios",
-    "id": "fc0c5862baf55eb24cbe3f10"
-  },
-  {
-    "title": "tennis",
-    "price": "150",
-    "quantity": "22",
-    "category": "shoes",
-    "id": "540c7be7a2922a4c80e86393"
-  },
-  {
-    "title": "tennis",
-    "price": "150",
-    "quantity": "22",
-    "category": "shoes",
-    "supplier": "nike",
-    "id": "c9b8656e97d6134ee0bcb58a"
-  },
-  {
-    "title": "jean",
-    "price": "150",
-    "quantity": "22",
-    "category": "none",
-    "supplier": "none",
-    "id": "3de90bf8bc32a06f31fa908f"
-  },
-  {
-    "title": "product from postman",
-    "price": 1000,
-    "stock": 10,
-    "id": "98752dcc652f8bd0dc7e3ced",
-    "category": "computers"
-  },
-  {
-    "title": "netbook",
-    "price": 1450,
-    "stock": 13,
-    "id": "5fbcf835236970b9bd548cbe",
-    "category": "computers"
-  },
-  {
-    "title": "producto nuevosss",
-    "price": 1450,
-    "stock": 1,
-    "id": "89b389b02aeae56806e2883c"
-  },
-  {
-    "title": "producto reciente",
-    "price": 1,
-    "category": "other",
-    "photo": "https://www.blogdelfotografo.com/wp-content/uploads/2020/12/producto_fondo_negro.webp",
-    "stock": 1,
-    "id": "7376dfd34e31971779767979"
-  },
-  {
-    "title": "producto mas reciente",
+    "title": "keyboard logitech",
     "price": 20,
-    "category": "jean",
-    "photo": "https://www.blogdelfotografo.com/wp-content/uploads/2020/12/producto_fondo_negro.webp",
-    "stock": 15,
-    "id": "da83b75fa00d0114d9d129d6"
-  },
-  {
-    "title": "keyboard",
-    "price": 20,
-    "category": "devices",
+    "category": "keyboard",
     "photo": "https://www.blogdelfotografo.com/wp-content/uploads/2020/12/producto_fondo_negro.webp",
     "stock": 12,
     "id": "2d59f0b688efe4512263273d"
   },
   {
-    "title": "keyboard",
-    "price": 20,
+    "title": "MAGIC-REFINER 60% Wireless Mechanical Keyboard",
+    "price": 35,
     "category": "devices",
-    "photo": "https://www.blogdelfotografo.com/wp-content/uploads/2020/12/producto_fondo_negro.webp",
+    "photo": "https://m.media-amazon.com/images/I/61O9ymO0s+L._AC_SL1500_.jpg",
+    "stock": 7,
+    "id": "414774755730a3663423f536"
+  },
+  {
+    "title": "Razer Ornata V3 X Gaming Keyboard",
+    "price": 33,
+    "category": "devices",
+    "photo": "https://m.media-amazon.com/images/I/71pqfvJKW5L._AC_SL1500_.jpg",
+    "stock": 3,
+    "id": "3bd676b28e3cf3fbb9ddb640"
+  },
+  {
+    "title": "Rii Gaming Keyboard 3-LED Backlit Mechanical Feel",
+    "price": 17,
+    "category": "devices",
+    "photo": "https://m.media-amazon.com/images/I/71NUnmd5m4L._AC_SL1484_.jpg",
+    "stock": 6,
+    "id": "e48575612181b87111b16625"
+  },
+  {
+    "title": "Amazon Basics Responsive and Precise 3-Button Wired USB Computer Mousel",
+    "price": 7,
+    "category": "Mouse",
+    "photo": "https://m.media-amazon.com/images/I/61Mzk2NljxL._AC_SL1500_.jpg",
+    "stock": 2,
+    "id": "cbdd2d0fe048ec540fce8a07"
+  },
+  {
+    "title": "Razer DeathAdder Essential Gaming Mouse",
+    "price": 24,
+    "category": "Mouse",
+    "photo": "https://m.media-amazon.com/images/I/8189uwDnMkL._AC_SL1500_.jpg",
+    "stock": 2,
+    "id": "cb5963ba21d2b6a04bec2224"
+  },
+  {
+    "title": "Uiosmuph LED Wireless Mouse, G12 Slim Rechargeable Silent Mouse",
+    "price": 25,
+    "category": "Mouse",
+    "photo": "https://m.media-amazon.com/images/I/51KCV2cdDsS._AC_SL1500_.jpg",
+    "stock": 18,
+    "id": "034ca6cbea87a166634f17cc"
+  },
+  {
+    "title": "Razer Basilisk V3 Customizable Ergonomic Gaming Mouse",
+    "price": 44,
+    "category": "Mouse",
+    "photo": "https://m.media-amazon.com/images/I/71umF87vjOL._AC_SL1500_.jpg",
+    "stock": 18,
+    "id": "521335616ab882f0d03ae9bf"
+  },
+  {
+    "title": "Razer Basilisk V3 Customizable Ergonomic Gaming Mouse",
+    "price": 44,
+    "category": "Mouse",
+    "photo": "https://m.media-amazon.com/images/I/71umF87vjOL._AC_SL1500_.jpg",
+    "stock": 17,
+    "id": "cc49d7c978a856c9bed1ba03"
+  },
+  {
+    "title": "PHILIPS 22 inch Class Thin Full HD (1920 x 1080) Monitor, 100Hz Refresh Rate",
+    "price": 70,
+    "category": "Monitor",
+    "photo": "https://m.media-amazon.com/images/I/71RTruFctrL._AC_SL1500_.jpg",
+    "stock": 16,
+    "id": "f86b41ae0a926ba9e5abb522"
+  },
+  {
+    "title": "Sceptre 24-inch C248W-1920RN Gaming Monitor | 1080p | 98% sRGB",
+    "price": 79,
+    "category": "Monitor",
+    "photo": "https://m.media-amazon.com/images/I/71P0M7tKjYL._AC_SL1343_.jpg",
+    "stock": 15,
+    "id": "d54ab0e7849627d1168760ed"
+  },
+  {
+    "title": "Sceptre 20 inch Monitor Model E205W-16003R | 1600x900 | 75Hz",
+    "price": 59,
+    "category": "Monitor",
+    "photo": "https://m.media-amazon.com/images/I/61oepG5Y2FL._AC_SL1313_.jpg",
+    "stock": 14,
+    "id": "daeebeb56b81a31070bc157b"
+  },
+  {
+    "title": "AOC 22 inch 22B2HM2 Monitor | 1920 x 1080 | 100Hz | VGA x1, HDMI x1 ",
+    "price": 65,
+    "category": "Monitor",
+    "photo": "https://m.media-amazon.com/images/I/61HtQ-bwDVL._AC_SL1000_.jpg",
+    "stock": 14,
+    "id": "b1f86d5a5b04acfc8fd8ad84"
+  },
+  {
+    "title": "Sceptre 24-inch LED Monitor E248W-19203R | 1080p | 99% sRGB | 2x HDMI",
+    "price": 79,
+    "category": "Monitor",
+    "photo": "https://m.media-amazon.com/images/I/61+-pmJOYjL._AC_SL1500_.jpg",
+    "stock": 13,
+    "id": "ef2b842d64c8d73da7623c8d"
+  },
+  {
+    "title": "Dell 31.5 inch S3222HN Monitor | 1920x1080 | 75Hz | 1800R | Curved | HDMI",
+    "price": 200,
+    "category": "Monitor",
+    "photo": "https://m.media-amazon.com/images/I/71LP6483haL._AC_SL1500_.jpg",
     "stock": 12,
-    "id": "05e04830dd4927bd7f9e1a6d"
+    "id": "d082bf5a1c1932df707fd69b"
+  },
+  {
+    "title": "ASUS 21.45 inch VZ22EHE Monitor | 1080P | 75Hz | 1ms (MPRT) | Adaptive-Sync | HDMI, VGA",
+    "price": 120,
+    "category": "Monitor",
+    "photo": "https://m.media-amazon.com/images/I/71WDEADD+UL._AC_SL1500_.jpg",
+    "stock": 12,
+    "id": "a5e10f72131ccd78ad51ce2a"
+  },
+  {
+    "title": "LG 27MS500-B 27 inch IPS FHD (1920x1080) 100Hz 5ms Reader Mode Borderless Design",
+    "price": 100,
+    "category": "Monitor",
+    "photo": "https://m.media-amazon.com/images/I/91y+axziiAL._AC_SL1500_.jpg",
+    "stock": 11,
+    "id": "fbdb3d5ccddf6c91c4828d84"
+  },
+  {
+    "title": "SAMSUNG T35F Series 27 inch LF27T350FHNXZA Computer Monitor | FHD 1080p ",
+    "price": 119,
+    "category": "Monitor",
+    "photo": "https://m.media-amazon.com/images/I/61B8Lq5NXmL._AC_SL1000_.jpg",
+    "stock": 10,
+    "id": "02edcde8f38aaa3dfe650d2b"
+  },
+  {
+    "title": "MSI PRO 22-inch MP223 Computer Monitor | 1920 x 1080 (FHD) | 100Hz | Adaptive-Synch | HDMI",
+    "price": 65,
+    "category": "Monitor",
+    "photo": "https://m.media-amazon.com/images/I/51+RgE2ATKL._AC_SL1024_.jpg",
+    "stock": 9,
+    "id": "535c4529bac8142cf2fe0003"
+  },
+  {
+    "title": "acer Nitro 29.5 1500R Curved Zero-Frame UWFHD 2560 x 1080 Gaming Monitor | AMD FreeSync Premium",
+    "price": 199,
+    "category": "Monitor",
+    "photo": "https://m.media-amazon.com/images/I/71wgkqzrqLL._AC_SL1500_.jpg",
+    "stock": 8,
+    "id": "b2509e302b9119bbbe0c9152"
+  },
+  {
+    "title": "LG UltraGear 27 inch 27GN800-B Gaming Monitor | 2560x1440, QHD | 144Hz",
+    "price": 187,
+    "category": "Monitor",
+    "photo": "https://m.media-amazon.com/images/I/81z8iO86p9L._AC_SL1500_.jpg",
+    "stock": 7,
+    "id": "75a5fc9389f0002787845e7e"
+  },
+  {
+    "title": "SAMSUNG 34 inch ViewFinity S50GC Series Monitor LS34C502GANXZA | Ultra-WQHD | 100Hz",
+    "price": 249,
+    "category": "Monitor",
+    "photo": "https://m.media-amazon.com/images/I/71y4oBIWcdL._AC_SL1500_.jpg",
+    "stock": 6,
+    "id": "701693ec2b8eda9c96bec904"
+  },
+  {
+    "title": "HP 14 Laptop, Intel Celeron N4020, 4 GB RAM, 64 GB Storage, 14-inch Micro-edge HD Display",
+    "price": 179,
+    "category": "Notebook",
+    "photo": "https://m.media-amazon.com/images/I/815uX7wkOZS._AC_SL1500_.jpg",
+    "stock": 6,
+    "id": "b333138644c05c5d21e6a20f"
+  },
+  {
+    "title": "ASUS Chromebook CM14 Laptop, 14 HD Anti-Glare Display (1366x768), MediaTek Kompanio 520",
+    "price": 274,
+    "category": "Notebook",
+    "photo": "https://m.media-amazon.com/images/I/616aCuRtnpL._AC_SL1500_.jpg",
+    "stock": 5,
+    "id": "8deef706dab939e5c655252f"
+  },
+  {
+    "title": "Acer Aspire 5 15 Slim Laptop | 15.6 FHD 1920x1080 IPS Touch | Intel Core i5-13420H | Intel UHD Graphics ",
+    "price": 449,
+    "category": "Notebook",
+    "photo": "https://m.media-amazon.com/images/I/71RkN3WRIBL._AC_SL1500_.jpg",
+    "stock": 4,
+    "id": "475ad9e2b98882cd3826e426"
+  },
+  {
+    "title": "Dell Inspiron 15 3000 3520 Business Laptop Computer[Windows 11 Pro], 15.6'' FHD Touchscreen, 11th Gen Intel Quad-Core i5-1135G7, 16GB RAM, 1TB PCIe SSD",
+    "price": 477,
+    "category": "Notebook",
+    "photo": "https://m.media-amazon.com/images/I/71gbrvRJI-L._AC_SL1500_.jpg",
+    "stock": 3,
+    "id": "7245ea925327d4b10eb6e9ef"
+  },
+  {
+    "title": "MSI Katana A17 AI 17.3” 240Hz QHD Gaming Laptop: Ryzen 9-8945HS, NVIDIA Geforce RTX 4070",
+    "price": 1699,
+    "category": "Notebook",
+    "photo": "https://m.media-amazon.com/images/I/71Zcl+FFsSL._AC_SL1500_.jpg",
+    "stock": 2,
+    "id": "d83edac61253391764aaedd4"
+  },
+  {
+    "title": "ASUS TUF Gaming A15 (2024) Gaming Laptop, 15.6” FHD 144Hz Display, NVIDIA® GeForce RTX™ 3050, AMD Ryzen™ 5 7535HS",
+    "price": 761,
+    "category": "Notebook",
+    "photo": "https://m.media-amazon.com/images/I/810dOSOM4-S._AC_SL1500_.jpg",
+    "stock": 2,
+    "id": "1b9b8877fde36cd32d27b080"
+  },
+  {
+    "title": "Acer Nitro V Gaming Laptop | Intel Core i7-13620H Processor | NVIDIA GeForce RTX 4050 Laptop GPU",
+    "price": 839,
+    "category": "Notebook",
+    "photo": "https://m.media-amazon.com/images/I/71F-Wcriq4L._AC_SL1500_.jpg",
+    "stock": 3,
+    "id": "59e7d06918c67b132fa18528"
+  },
+  {
+    "title": "Lenovo 2022 Newest Ideapad 3 Laptop, 15.6 HD Touchscreen, 11th Gen Intel Core i3-1115G4 Processor, 8GB DDR4 RAM",
+    "price": 346,
+    "category": "Notebook",
+    "photo": "https://m.media-amazon.com/images/I/61QGMX0Qy6L._AC_SL1352_.jpg",
+    "stock": 3,
+    "id": "fbf524424b9319b5f6854192"
+  },
+  {
+    "title": "Acer Nitro 16 Gaming Laptop | AMD Ryzen 7 7840HS OctaCore CPU | NVIDIA GeForce RTX 4060",
+    "price": 957,
+    "category": "Notebook",
+    "photo": "https://m.media-amazon.com/images/I/71Hiqi140OL._AC_SL1500_.jpg",
+    "stock": 4,
+    "id": "806e79bcec08f71e818ebe15"
+  },
+  {
+    "title": "Skytech Gaming Nebula Gaming PC Desktop – Intel Core i5 13400F 2.5 GHz, NVIDIA RTX 4060",
+    "price": 850,
+    "category": "Pc Desktop",
+    "photo": "https://m.media-amazon.com/images/I/61INtCQzv2L._AC_SL1000_.jpg",
+    "stock": 5,
+    "id": "649cb5710ede17ab2672e7bc"
+  },
+  {
+    "title": "iBUYPOWER TraceMesh Gaming PC Computer Desktop TMA5N16502 (AMD Ryzen 5 4500, GTX 1650 4GB, 16GB DDR4 3200 (8x2)",
+    "price": 600,
+    "category": "Pc Desktop",
+    "photo": "https://m.media-amazon.com/images/I/71-O7z1YYsL._AC_SL1500_.jpg",
+    "stock": 6,
+    "id": "5c7cd5bf90b6a967dd4f8db4"
+  },
+  {
+    "title": "CyberPowerPC Gamer Xtreme VR Gaming PC, Intel Core i7-14700F 2.1GHz, GeForce RTX 4060 Ti 16GB",
+    "price": 1249,
+    "category": "Pc Desktop",
+    "photo": "https://m.media-amazon.com/images/I/71Wb35ZsDiL._AC_SL1500_.jpg",
+    "stock": 7,
+    "id": "152d3a62c0b9fe530cefcb0b"
+  },
+  {
+    "title": "Skytech Archangel Gaming PC Desktop, Ryzen 7 7700X 4.5 GHz (5.4GHz Turbo Boost), NVIDIA RTX 4070 Super 12GB GDDR6X",
+    "price": 1599,
+    "category": "Pc Desktop",
+    "photo": "https://m.media-amazon.com/images/I/61bTBXBi2XL._AC_SL1280_.jpg",
+    "stock": 8,
+    "id": "1acef71b1025f6a86d3bd276"
+  },
+  {
+    "title": "CyberPowerPC Gamer Master Gaming PC, AMD Ryzen 7 8700F 4.1GHz, GeForce RTX 4060 Ti 8GB, 16GB DDR5",
+    "price": 1099,
+    "category": "Pc Desktop",
+    "photo": "https://m.media-amazon.com/images/I/71-zEebm3LL._AC_SL1500_.jpg",
+    "stock": 9,
+    "id": "363e2fba41a2eb5fd4918186"
+  },
+  {
+    "title": "Thermaltake LCGS Quartz i460 R4 Gaming Desktop (Intel Core™ i5-13400F, 3600Mhz 16GB RGB Memory",
+    "price": 849,
+    "category": "Pc Desktop",
+    "photo": "https://m.media-amazon.com/images/I/81JtHUVy7+L._AC_SL1500_.jpg",
+    "stock": 10,
+    "id": "5d106ab7b12698253d7bdf91"
+  },
+  {
+    "title": "ASUS ROG G16CH (2024) Gaming Desktop PC, Intel® Core™ i7-14700F, NVIDIA® GeForce RTX™ 4060Ti Dual",
+    "price": 1999,
+    "category": "Pc Desktop",
+    "photo": "https://m.media-amazon.com/images/I/612JcLg-CdL._AC_SL1500_.jpg",
+    "stock": 11,
+    "id": "6e8dcb8af49d8fd7c59837ce"
+  },
+  {
+    "title": "iBUYPOWER Y40 White Gaming PC Computer Desktop Y40WI7N46T02 (Intel Core i7 14700KF, RTX 4060Ti 8GB, 32GB DDR5 5600 RGB (16x2)",
+    "price": 1599,
+    "category": "Pc Desktop",
+    "photo": "https://m.media-amazon.com/images/I/81LJLvwOLPL._AC_SL1500_.jpg",
+    "stock": 12,
+    "id": "56232f2ece546cca02bdeffd"
+  },
+  {
+    "title": "Skytech Nebula Gaming PC Desktop, Ryzen 5 5500 3.6 GHz (4.2GHz Turbo Boost), NVIDIA RTX 3050 8GB",
+    "price": 749,
+    "category": "Pc Desktop",
+    "photo": "https://m.media-amazon.com/images/I/619sSfOKnmL._AC_.jpg",
+    "stock": 12,
+    "id": "4a07a13f1267962315c3904f"
   }
 ]

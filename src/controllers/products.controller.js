@@ -50,28 +50,11 @@ async function createGet(req, res, next) {
   }
 }
 
-// async function createProduct(req, res, next) {
-//   try {
-//     const data = req.body;
-//     // guardo el objeto que envía el front con los datos que se necesita al crear
-//     const responseManager = await productsManager.create(data);
-//     return res
-//       .status(201)
-//       .json({ message: "PRODUCT CREATED", response: responseManager });
-//   } catch (error) {
-//     return next(error);
-//   }
-// }
 async function createProduct(req, res, next) {
   try {
     const { title } = req.body; // obligatorios
     const { category, price, photo, stock } = req.body; // opcionales
-    
     // Validar que los campos obligatorios estén presentes ya no se hace por que está en isValidData
-    // if (!title || !quantity) {
-    //   return res.status(400).json({ message: "Title and quantity are required" });
-    // }
-
     // Valores por defecto para los campos opcionales
     if (!category) {
       category = "other";
@@ -85,7 +68,6 @@ async function createProduct(req, res, next) {
     if (!stock) {
       stock = 1;
     }
-
     // Crear el producto con todos los campos
     const responseManager = await productsManager.create({
       title,
@@ -94,7 +76,6 @@ async function createProduct(req, res, next) {
       photo,
       stock,
     });
-
     return res.status(201).json({ message: "PRODUCT CREATED", response: responseManager });
   } catch (error) {
     return next(error);
@@ -117,7 +98,6 @@ async function getProduct(req, res, next) {
     return next(error);
   }
 }
-
 
 async function updateProduct(req, res, next) {
   try {
