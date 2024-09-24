@@ -1,7 +1,7 @@
 import express, { response } from "express";
 import morgan from "morgan";
-import cors from "cors"
-import { engine } from "express-handlebars"
+import cors from "cors";
+import { engine } from "express-handlebars";
 import router from "./src/routers/index.router.js";
 import errorHandler from "./src/middlewares/errorHandler.js";
 import pathHandler from "./src/middlewares/pathHandler.js";
@@ -13,18 +13,19 @@ try {
   const ready = () => console.log("server ready on port " + port);
   server.listen(port, ready);
 
-  server.use(morgan("dev"))
+  server.use(morgan("dev"));
   server.use(express.urlencoded({ extended: true }));
   server.use(express.json());
+  server.use(cors());
+  server.use("/public", express.static("public"))
 
-  server.use(cors())
-  server.engine("handlebars", engine())
-  server.set("view engine", "handlebars")
-  server.set("views", __dirname + "/src/views")
+  server.engine("handlebars", engine());
+  server.set("view engine", "handlebars");
+  server.set("views", __dirname + "/src/views");
 
   server.use(router);
-  server.use(errorHandler)
-  server.use(pathHandler)
+  server.use(errorHandler);
+  server.use(pathHandler);
 } catch (error) {
   console.log(error);
 }

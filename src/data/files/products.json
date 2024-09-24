@@ -2,7 +2,7 @@
   {
     "title": "keyboard logitech",
     "price": 20,
-    "category": "keyboard",
+    "category": "Keyboard",
     "photo": "https://www.blogdelfotografo.com/wp-content/uploads/2020/12/producto_fondo_negro.webp",
     "stock": 12,
     "id": "2d59f0b688efe4512263273d"
@@ -10,7 +10,7 @@
   {
     "title": "MAGIC-REFINER 60% Wireless Mechanical Keyboard",
     "price": 35,
-    "category": "devices",
+    "category": "Keyboard",
     "photo": "https://m.media-amazon.com/images/I/61O9ymO0s+L._AC_SL1500_.jpg",
     "stock": 7,
     "id": "414774755730a3663423f536"
@@ -18,7 +18,7 @@
   {
     "title": "Razer Ornata V3 X Gaming Keyboard",
     "price": 33,
-    "category": "devices",
+    "category": "Keyboard",
     "photo": "https://m.media-amazon.com/images/I/71pqfvJKW5L._AC_SL1500_.jpg",
     "stock": 3,
     "id": "3bd676b28e3cf3fbb9ddb640"
@@ -26,7 +26,7 @@
   {
     "title": "Rii Gaming Keyboard 3-LED Backlit Mechanical Feel",
     "price": 17,
-    "category": "devices",
+    "category": "Keyboard",
     "photo": "https://m.media-amazon.com/images/I/71NUnmd5m4L._AC_SL1484_.jpg",
     "stock": 6,
     "id": "e48575612181b87111b16625"
