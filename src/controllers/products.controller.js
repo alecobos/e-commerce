@@ -53,7 +53,7 @@ async function createGet(req, res, next) {
 async function createProduct(req, res, next) {
   try {
     const { title } = req.body; // obligatorios
-    const { category, price, photo, stock } = req.body; // opcionales
+    let { category, price, photo, stock } = req.body; // opcionales
     // Validar que los campos obligatorios estén presentes ya no se hace por que está en isValidData
     // Valores por defecto para los campos opcionales
     if (!category) {
