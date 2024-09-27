@@ -1,7 +1,12 @@
-<article>
-  <h4>{{one.category}}</h4>
-  <h4>{{one.title}}</h4>
-  <img src="{{one.photo}}" alt="{{one.title}}" />
-  <p>Price: ${{one.price}}</p>
-  <p>Stock: {{one.stock}}</p>
-</article>
+<section class="d-flex flex-wrap justify-content-evenly text-center">
+  <div class="card my-3" style="width: 18rem;">
+    <h5 class="card-title">{{one.category}}</h5>
+    <h5 class="card-title">{{one.title}}</h5>
+    <img src="{{one.photo}}" class="card-img-top" alt="{{one.title}}" />
+    <div class="card-body">
+      <p class="card-text ">Price: ${{one.price}}</p>
+      <p class="card-text">Stock: {{one.stock}}</p>
+      <a href="" class="btn btn-primary mx-3">Comprar</a>
+    </div>
+  </div>
+</section>

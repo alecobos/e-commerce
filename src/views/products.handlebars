@@ -1,19 +1,19 @@
-<h2>Products</h2>
-<section class="d-flex flex-wrap justify-content-evenly" >
+<h1 class="text-center">Products</h1>
+<article class="d-flex flex-wrap justify-content-evenly" >
   {{#each products}}
     
-    <div class="card my-3" style="width: 18rem;">
-        <h5 class="card-title text-center">{{this.category}}</h5>
-        <h5 class="card-title">{{this.title}}</h5>
-        <img src="{{this.photo}}" class="card-img-top"  alt="{{this.title}}">
-        <div class="card-body"></div>
+    <div class="card my-3 text-center " style="width: 18rem;">
+        <h5 class="card-title">{{this.category}}</h5>
+        <h5 class="card-title mx-1">{{this.title}}</h5>
+        <img src="{{this.photo}}" class="card-img-top text-center mx-auto d-block"  alt="{{this.title}}" style="height: 10rem; width: 15rem;">
+        <div class="card-body bg-info border border-dark border-1" style="height: 10rem;">
             <p class="card-text">Price: ${{this.price}}</p>
             <p class="card-text">Stock: {{this.stock}}</p>
-            <a href="/products/{{this.id}}" class="btn btn-primary">Comprar</a>
+            <a href="/products/{{this.id}}" class="btn btn-primary mx-5 mb-2">Comprar</a>
         </div>
     </div>
   {{/each}}
-</section>
+</article>
 
 
 

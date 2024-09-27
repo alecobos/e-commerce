@@ -1,5 +1,5 @@
 import { Router } from "express";
-import isValidUser from "../../middlewares/isValidUser.js";
+import isValidUser from "../../middlewares/isValidUser.mid.js";
 import {
   getAllUsers,
   getUser,
