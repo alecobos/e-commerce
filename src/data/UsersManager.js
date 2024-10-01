@@ -15,16 +15,23 @@ class UsersManager {
       console.log("file already exists");
     }
   }
-  async readAll() {
+
+  async readAll(role) {
     try {
-      const data = await fs.promises.readFile(this.path, "utf-8");
-      const parseData = JSON.parse(data);
-      return parseData;
+        const users = await fs.promises.readFile(this.path, "utf-8");
+        const parseUsers = JSON.parse(users);
+        if (role) {
+            const filteredUsers = parseUsers.filter(user => user.role === role);
+            return filteredUsers;
+        } else {
+            return parseUsers;
+        }
     } catch (error) {
-      console.log(error);
-      throw error;
+        console.log(error);
+        throw error;
     }
-  }
+}
+
   async read(id) {
     try {
       const all = await this.readAll();
@@ -48,7 +55,6 @@ class UsersManager {
       throw error;
     }
   }
-
 
   async update(id, newData) {
     try {

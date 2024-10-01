@@ -156,6 +156,24 @@ async function showProducts (req, res, next) {
   }
 }
 
+async function showOneProduct(req, res, next) {
+  //res es el objeto de respuesta a enviar al cliente
+  try {
+    const { pid } = req.params;
+    const response = await productsManager.read(pid);
+    //response es la respuesta que se espera del manager (para leer un producto)
+    if (response) {
+      return res.render("oneproduct", { one: response })
+    } else {
+      const error = new Error("NOT FOUND PRODUCT");
+      error.statusCode = 404;
+      throw error;
+    }
+  } catch (error) {
+    return next(error);
+  }
+}
+
 export {
   getAllProducts,
   getProduct,
@@ -164,4 +182,5 @@ export {
   updateProduct,
   destroyProduct,
   showProducts,
+  showOneProduct,
 };

@@ -16,6 +16,7 @@ async function getAllUsers(req, res, next) {
   }
 }
 
+
 async function getUser(req, res, next) {
   try {
     const { uid } = req.params;
@@ -93,4 +94,13 @@ async function destroyUser(req, res, next) {
   }
 }
 
-export { getAllUsers, getUser, createUser, updateUser, destroyUser };
+const registerView = async (req, res, next) => {
+  try {
+    const users = await usersManager.readAll()
+      return res.render("register", { users })
+  } catch (error) {
+      next(error)
+  }
+}
+
+export { getAllUsers, getUser, createUser, updateUser, destroyUser, registerView };
