@@ -7,7 +7,7 @@ document.querySelector("#register").addEventListener("click", ()=> {
     const photo = document.querySelector("#photo").value
     const userData = { userName, email, password, photo }
     socket.emit("new user", userData)
-    
+
 })
 
 socket.on("update users", data => {

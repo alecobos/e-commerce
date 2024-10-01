@@ -16,12 +16,12 @@ try {
   const port = 8080;
   const ready = () => console.log("server ready on port " + port);
   const httpServer = createServer(server);
-  httpServer.listen(port, ready);
+
 
   //definimos el servidor tcp
   const socketServer = new Server(httpServer);
   socketServer.on("connection", socketCb);
-    
+  httpServer.listen(port, ready);
   //template engine
   server.engine("handlebars", engine());
   server.set("view engine", "handlebars");
@@ -32,7 +32,7 @@ try {
   server.use(morgan("dev")); // para registrar las solicitudes
   server.use(express.json()); // para trabajar rec.body
   server.use(cors());
-  server.use("/public", express.static(__dirname +"public")); //para poder usar la carpeta public
+  server.use("/public", express.static("public")); //para poder usar la carpeta public
   
   //routers
   server.use(router);

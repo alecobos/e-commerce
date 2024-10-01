@@ -35,5 +35,12 @@
     "rol": 2,
     "photo": "https://i.pinimg.com/474x/5a/1b/1e/5a1b1e32639c6210416804dc7a93ef8e.jpg",
     "id": "d4f72859d4b3ff8894bcd50f"
+  },
+  {
+    "userName": "alejandro",
+    "email": "cobos@ale.com",
+    "password": "98765",
+    "photo": "",
+    "id": "558e9dc55cfa9e683bf0da0d"
   }
 ]
