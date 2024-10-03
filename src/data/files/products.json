@@ -318,5 +318,21 @@
     "photo": "https://m.media-amazon.com/images/I/619sSfOKnmL._AC_.jpg",
     "stock": 12,
     "id": "4a07a13f1267962315c3904f"
+  },
+  {
+    "title": "Logi Pops",
+    "price": "34",
+    "category": "Keyboard",
+    "photo": "",
+    "stock": "11",
+    "id": "286dbc2f5a589f5066de8088"
+  },
+  {
+    "title": "Mouse Logi Pops",
+    "price": "12",
+    "category": "Mouse",
+    "photo": "",
+    "stock": "4",
+    "id": "716a37c3f73ac30470bf3a7b"
   }
 ]

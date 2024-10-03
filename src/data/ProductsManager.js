@@ -17,24 +17,47 @@ class ProductsManager {
       console.log("file already exists");
     }
   }
+  // async readAll(category) {
+  //   try {
+  //     const data = await fs.promises.readFile(this.path, "utf-8");
+  //     const parseData = JSON.parse(data);
+  //     //console.log(parseData);
+  //     if (category) {
+  //       const filteredData = parseData.filter(
+  //         (each) => each.category === category
+  //       );
+  //       return filteredData;
+  //     } else {
+  //       return parseData;
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //     throw error;
+  //   }
+  // }
+
   async readAll(category) {
     try {
       const data = await fs.promises.readFile(this.path, "utf-8");
       const parseData = JSON.parse(data);
-      //console.log(parseData);
-      if (category) {
-        const filteredData = parseData.filter(
-          (each) => each.category === category
-        );
-        return filteredData;
-      } else {
+  
+      // Si la categoría es "All" o no hay categoría, devolver todos los productos
+      if (!category || category === "All") {
         return parseData;
       }
+  
+      // Filtrar productos por categoría
+      const filteredData = parseData.filter(
+        (each) => each.category === category
+      );
+      return filteredData;
     } catch (error) {
       console.log(error);
       throw error;
     }
   }
+  
+  
   async read(id) {
     try {
       const all = await this.readAll();

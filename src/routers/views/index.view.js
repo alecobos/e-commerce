@@ -10,6 +10,7 @@ viewRouter.use("/products", productsViewRouter);
 viewRouter.use("/users", usersViewRouter);
 viewRouter.use("/chat", chatViewRouter);
 viewRouter.use("/carts", cartsViewRouter);
+viewRouter.use("/", productsViewRouter); //probando esto
 viewRouter.get("/", (req, res, next) => {
     try {
         return res.render("index")

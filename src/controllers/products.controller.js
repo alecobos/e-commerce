@@ -156,6 +156,55 @@ async function showProducts (req, res, next) {
   }
 }
 
+async function showProductsAdmin (req, res, next) {
+  try {
+    let { category } = req.query;
+    let all;
+    if (!category) {
+      all = await productsManager.readAll();
+    } else {
+      all = await productsManager.readAll(category);
+    }
+    if (all.length > 0) {
+      return res.render("productsAdmin", { products: all })
+    } else {
+      const error = new Error("NOT FOUND PRODUCTS");
+      error.statusCode = 404;
+      throw error;
+    }
+
+  } catch (error) {
+    return next(error)
+  }
+}
+
+
+// async function showProducts (req, res, next) {
+//   try {
+//     let { category } = req.query;
+//     let all;
+//     if (!category) {
+//       all = await productsManager.readAll();
+//     } else {
+//       all = await productsManager.readAll(category);
+//     }
+//     if (all.length > 0) {
+//       if (req.path === '/admin') {
+//         return res.render("productsAdmin", { products: all });
+//       } else {
+//         return res.render("products", { products: all })
+//       }
+//     } else {
+//       const error = new Error("NOT FOUND PRODUCTS");
+//       error.statusCode = 404;
+//       throw error;
+//     }
+
+//   } catch (error) {
+//     return next(error)
+//   }
+// }
+
 async function showOneProduct(req, res, next) {
   //res es el objeto de respuesta a enviar al cliente
   try {
@@ -183,4 +232,5 @@ export {
   destroyProduct,
   showProducts,
   showOneProduct,
+  showProductsAdmin,
 };
