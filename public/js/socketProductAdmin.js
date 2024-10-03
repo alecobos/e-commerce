@@ -2,10 +2,10 @@ const socket = io();
 
 document.querySelector("#create").addEventListener("click", ()=> {
     const title = document.querySelector("#title").value
-    const price = document.querySelector("#price").value
+    const price = Number(document.querySelector("#price").value);
     const category = document.querySelector("#category").value
     const photo = document.querySelector("#photo").value
-    const stock = document.querySelector("#stock").value
+    const stock = Number(document.querySelector("#stock").value);
     const productData = { title, price, category, photo, stock }
     socket.emit("new product", productData)
 })
@@ -27,4 +27,30 @@ socket.on("refresh products", products => {
     `).join("");  // Unir todas las filas en una sola cadena
     
     document.getElementById("productList").innerHTML = productList;  // Insertar las filas en la tabla
+});
+
+// document.querySelector("#delete").addEventListener("click", ()=> {
+//     const pid = document.querySelector("#id").value
+//     console.log(pid)
+//     socket.emit("delete product", pid)
+// })
+
+
+// Obtener todos los botones de eliminar
+const deleteButtons = document.querySelectorAll('.delete-btn');
+
+// Añadir un event listener a cada botón
+deleteButtons.forEach(button => {
+  button.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevenir la acción por defecto del enlace
+    const productId = button.getAttribute('data-id'); // Obtener el ID del producto
+
+    console.log("Producto a eliminar con ID:", productId);
+    socket.emit("delete product", productId)
+    // Aquí puedes hacer una llamada al servidor para eliminar el producto
+    // por ejemplo, usando fetch o axios:
+    // fetch(`/deleteProduct/${productId}`, { method: 'DELETE' })
+    //   .then(response => response.json())
+    //   .then(data => console.log(data));
+  });
 });

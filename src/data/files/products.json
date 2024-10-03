@@ -329,10 +329,10 @@
   },
   {
     "title": "Mouse Logi Pops",
-    "price": "12",
+    "price": 12,
     "category": "Mouse",
     "photo": "",
-    "stock": "4",
-    "id": "716a37c3f73ac30470bf3a7b"
+    "stock": 4,
+    "id": "1e39d7eef956621f15ee5481"
   }
 ]

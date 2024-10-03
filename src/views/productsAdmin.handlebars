@@ -5,46 +5,29 @@
   >
     <h1>Create New Product</h1>
     <input class="w-50" type="text" name="title" id="title" placeholder="Title"/>
-    <input class="w-50 mt-1" type="text" name="price" id="price" placeholder="Price"/>
+    <input class="w-50 mt-1" type="number" name="price" id="price" placeholder="Price"/>
     <input class="w-50 mt-1" type="text" name="category" id="category" placeholder="Category"/>
     <input class="w-50 mt-1" type="text" name="photo" id="photo" placeholder="Photo"/>
-    <input class="w-50 mt-1" type="text" name="stock" id="stock" placeholder="Stock"/>
+    <input class="w-50 mt-1" type="number" name="stock" id="stock" placeholder="Stock"/>
     <input class="btn btn-outline-light mt-2" type="button" id="create" value="Create"/>
   </form>
 </section>
 
-{{!-- <article class="d-flex flex-wrap justify-content-evenly" id="productList">
-    {{#each products}}
-        <div class="card my-3 text-center text-light border-secondary bg-black" style="width: 18rem;">
-            <h5 class="card-title">{{this.category}}</h5>
-            <h5 class="card-title mx-1">{{this.title}}</h5>
-            <img src="{{this.photo}}" class="card-img-top text-center mx-auto d-block" alt="{{this.title}}" style="height: 10rem; width: 15rem;">
-            <div class="card-body bg-dark border-top border-secondary border-1" style="height: 10rem;">
-                <p class="card-text">Price: ${{this.price}}</p>
-                <p class="card-text">Stock: {{this.stock}}</p>
-                <a href="" class="btn btn-outline-light mx-5 mb-2">Modificar</a>
-                <a href="/products/{{this.id}}" class="btn btn-outline-light mx-5 mb-2">Eliminar</a>
-            </div>
-        </div>
-    {{/each}}
-</article> --}}
-
 <table  id="productList">
-  {{! <table class="d-flex flex-column justify-content-evenly" id="productList"> }}
 
   {{#each products}}
     <tr class="text-light">
       <th>
-        <td class="ms-2" style="width: 10rem;">{{this.category}}</td>
-        <td class="mx-1 ms-2" style="width: 55rem;">{{this.title}}</td>
-        {{!-- <img src="{{this.photo}}" class="text-center mx-auto d-block" alt="{{this.title}}" style="height: 10rem; width: 15rem;"> --}}
+        <td class="ms-2" style="width: 7rem;">{{this.category}}</td>
+        <td class="mx-1 ms-2" style="width: 40rem;">{{this.title}}</td>
         <td class="ms-2">Price: ${{this.price}}</td>
         <td class="ms-2">Stock: {{this.stock}}</td>
+        <td class="ms-2">Id: {{this.id}}</td>
         <td>
             <a href="" class="btn btn-outline-light mx-5 mb-2 ms-2">Modify</a>  
         </td>
         <td>
-            <a href="/products/{{this.id}}" class="btn btn-outline-light mx-5 mb-2 ms-2">Delete</a>
+            <a href="" class="btn btn-outline-light mx-5 mb-2 ms-2 delete-btn" id="delete" data-id="{{this.id}}">Delete</a>
         </td>
         
       </th>
