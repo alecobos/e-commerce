@@ -42,5 +42,19 @@
     "password": "98765",
     "photo": "",
     "id": "558e9dc55cfa9e683bf0da0d"
+  },
+  {
+    "userName": "Micaela",
+    "email": "cardozo@micaela.com",
+    "password": "poiuy",
+    "photo": "https://i.pinimg.com/474x/5a/1b/1e/5a1b1e32639c6210416804dc7a93ef8e.jpg",
+    "id": "f10d426a4365c66a14fddbf4"
+  },
+  {
+    "userName": "Pedro",
+    "email": "ale@algo.com",
+    "password": "zxcvb",
+    "photo": "https://i.pinimg.com/474x/5a/1b/1e/5a1b1e32639c6210416804dc7a93ef8e.jpg",
+    "id": "47a4e0276c684069551a54b7"
   }
 ]

@@ -1,9 +1,15 @@
 import { Router } from "express";
-import { showOneProduct, showProducts } from "../../controllers/products.controller.js";
+import {
+  showOneProduct,
+  showProducts,
+  showProductsAdmin,
+} from "../../controllers/products.controller.js";
 
 const productsViewRouter = Router();
 
-productsViewRouter.get("/", showProducts)
-productsViewRouter.get("/:pid", showOneProduct)
+productsViewRouter.get("/", showProducts);
+
+productsViewRouter.get("/admin", showProductsAdmin)
+productsViewRouter.get("/:pid", showOneProduct);
 
 export default productsViewRouter;
