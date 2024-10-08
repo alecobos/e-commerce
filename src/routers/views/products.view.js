@@ -1,5 +1,6 @@
 import { Router } from "express";
 import {
+  modifyProduct,
   showOneProduct,
   showProducts,
   showProductsAdmin,
@@ -11,5 +12,7 @@ productsViewRouter.get("/", showProducts);
 
 productsViewRouter.get("/admin", showProductsAdmin)
 productsViewRouter.get("/:pid", showOneProduct);
+productsViewRouter.get("/admin/:pid", modifyProduct);
+
 
 export default productsViewRouter;

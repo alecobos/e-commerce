@@ -179,32 +179,6 @@ async function showProductsAdmin (req, res, next) {
 }
 
 
-// async function showProducts (req, res, next) {
-//   try {
-//     let { category } = req.query;
-//     let all;
-//     if (!category) {
-//       all = await productsManager.readAll();
-//     } else {
-//       all = await productsManager.readAll(category);
-//     }
-//     if (all.length > 0) {
-//       if (req.path === '/admin') {
-//         return res.render("productsAdmin", { products: all });
-//       } else {
-//         return res.render("products", { products: all })
-//       }
-//     } else {
-//       const error = new Error("NOT FOUND PRODUCTS");
-//       error.statusCode = 404;
-//       throw error;
-//     }
-
-//   } catch (error) {
-//     return next(error)
-//   }
-// }
-
 async function showOneProduct(req, res, next) {
   //res es el objeto de respuesta a enviar al cliente
   try {
@@ -213,6 +187,24 @@ async function showOneProduct(req, res, next) {
     //response es la respuesta que se espera del manager (para leer un producto)
     if (response) {
       return res.render("oneproduct", { one: response })
+    } else {
+      const error = new Error("NOT FOUND PRODUCT");
+      error.statusCode = 404;
+      throw error;
+    }
+  } catch (error) {
+    return next(error);
+  }
+}
+
+async function modifyProduct(req, res, next) {
+  //res es el objeto de respuesta a enviar al cliente
+  try {
+    const { pid } = req.params;
+    const response = await productsManager.read(pid);
+    //response es la respuesta que se espera del manager (para leer un producto)
+    if (response) {
+      return res.render("modifyProduct", { one: response })
     } else {
       const error = new Error("NOT FOUND PRODUCT");
       error.statusCode = 404;
@@ -233,4 +225,5 @@ export {
   showProducts,
   showOneProduct,
   showProductsAdmin,
+  modifyProduct,
 };

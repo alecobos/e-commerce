@@ -1,10 +1,10 @@
 [
   {
-    "title": "keyboard logitech",
-    "price": 20,
+    "title": "keyboard logitech LTE",
+    "price": 30,
     "category": "Keyboard",
     "photo": "https://www.blogdelfotografo.com/wp-content/uploads/2020/12/producto_fondo_negro.webp",
-    "stock": 12,
+    "stock": 15,
     "id": "2d59f0b688efe4512263273d"
   },
   {
@@ -321,17 +321,17 @@
   },
   {
     "title": "Logi Pops",
-    "price": "34",
+    "price": 34,
     "category": "Keyboard",
-    "photo": "",
-    "stock": "11",
+    "photo": "https://i.rtings.com/assets/products/W2RG08MN/logitech-pop-keys/design-medium.jpg?format=auto",
+    "stock": 11,
     "id": "286dbc2f5a589f5066de8088"
   },
   {
     "title": "Mouse Logi Pops",
     "price": 12,
     "category": "Mouse",
-    "photo": "",
+    "photo": "https://popular.com.sg/cdn/shop/products/ProductThumbnail_20f2bfbf-331f-46dc-b1b9-998f5aa55ee8.jpg?v=1672994445",
     "stock": 4,
     "id": "1e39d7eef956621f15ee5481"
   }

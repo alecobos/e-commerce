@@ -6,7 +6,8 @@ const router = Router();
 
 router.use("/api", apiRouter);
 router.use("/", viewRouter);
-router.use("/", index);
+// router.use("/", index);
+router.get("/", index);
 
 
 function index(req, res) { 
