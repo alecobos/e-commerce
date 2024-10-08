@@ -18,8 +18,16 @@ document.querySelector("#register").addEventListener("click", ()=> {
     if (email && password) {
         const userData = { userName, email, password, photo, role };
         socket.emit("new user", userData);
+        Swal.fire({
+            title: "User Created",
+            icon: "success"
+          });
     } else {
-        alert("Email y contraseña son obligatorios.");
+        Swal.fire({
+            icon: "error",
+            title: "Email and password are required.",
+            text: "Something went wrong!",
+          });
     }
 
 })
