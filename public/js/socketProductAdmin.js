@@ -21,8 +21,14 @@ document.querySelector("#create").addEventListener("click", ()=> {
     }
 
 
-    const productData = { title, price, category, photo, stock }
-    socket.emit("new product", productData)
+    if (title) {
+        const productData = { title, price, category, photo, stock }
+        socket.emit("new product", productData)
+    } else {
+        alert("Title is obligatory");
+    }
+
+
 })
 
 socket.on("refresh products", products => {
