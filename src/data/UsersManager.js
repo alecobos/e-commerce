@@ -45,7 +45,7 @@ class UsersManager {
 
   async readOneUserByEmail(email) {
     try {
-      const allUsers = await this.readAllUsers();
+      const allUsers = await this.readAll();
       const oneUser = allUsers.find((user) => user.email === email);
       return oneUser;
     } catch (error) {
