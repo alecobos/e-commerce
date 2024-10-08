@@ -24,8 +24,16 @@ document.querySelector("#create").addEventListener("click", ()=> {
     if (title) {
         const productData = { title, price, category, photo, stock }
         socket.emit("new product", productData)
+        Swal.fire({
+            title: "Product Created",
+            icon: "success"
+          });
     } else {
-        alert("Title is obligatory");
+        Swal.fire({
+            icon: "error",
+            title: "Title is obligatory",
+            text: "Something went wrong!",
+          });
     }
 
 
@@ -58,8 +66,34 @@ deleteButtons.forEach(button => {
   button.addEventListener('click', (event) => {
     event.preventDefault(); // Prevenir la acción por defecto del enlace
     const productId = button.getAttribute('data-id'); // Obtener el ID del producto
-
-    console.log("Producto a eliminar con ID:", productId);
-    socket.emit("delete product", productId)
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          console.log("Producto a eliminar con ID:", productId);
+          socket.emit("delete product", productId)
+          Swal.fire({
+            title: "Deleted!",
+            text: "Product has been deleted.",
+            icon: "success"
+          });
+        }
+      });
+    
   });
+
+//   deleteButtons.forEach(button => {
+//     button.addEventListener('click', (event) => {
+//       event.preventDefault(); // Prevenir la acción por defecto del enlace
+//       const productId = button.getAttribute('data-id'); // Obtener el ID del producto
+  
+//       console.log("Producto a eliminar con ID:", productId);
+//       socket.emit("delete product", productId)
+//     });
 });
