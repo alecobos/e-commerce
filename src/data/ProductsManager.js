@@ -55,7 +55,7 @@ class ProductsManager {
 
       data.price = Number(data.price); // Asegurarse de que sea un número
       data.stock = Number(data.stock); // Asegurarse de que sea un número
-      data.isOnline = true;
+
 
       const all = await this.readAll();
       all.push(data);

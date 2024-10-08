@@ -6,6 +6,21 @@ document.querySelector("#create").addEventListener("click", ()=> {
     const category = document.querySelector("#category").value
     const photo = document.querySelector("#photo").value
     const stock = Number(document.querySelector("#stock").value);
+    
+    if (!stock) {
+        stock = 1;
+    }
+    if (!price) {
+        price = 1;
+    }
+    if (!category) {
+        category = "Others";
+    }
+    if (!photo) {
+        photo = "https://www.blogdelfotografo.com/wp-content/uploads/2020/12/producto_fondo_negro.webp";
+    }
+
+
     const productData = { title, price, category, photo, stock }
     socket.emit("new product", productData)
 })
@@ -24,22 +39,15 @@ socket.on("refresh products", products => {
                 <a href="/products/${product.id}" class="btn btn-outline-light mx-5 mb-2 ms-2">Delete</a>
             </td>
         </tr>
-    `).join("");  // Unir todas las filas en una sola cadena
+    `).join("");  
     
-    document.getElementById("productList").innerHTML = productList;  // Insertar las filas en la tabla
+    document.getElementById("productList").innerHTML = productList;  
 });
 
-// document.querySelector("#delete").addEventListener("click", ()=> {
-//     const pid = document.querySelector("#id").value
-//     console.log(pid)
-//     socket.emit("delete product", pid)
-// })
 
-
-// Obtener todos los botones de eliminar
 const deleteButtons = document.querySelectorAll('.delete-btn');
 
-// Añadir un event listener a cada botón
+
 deleteButtons.forEach(button => {
   button.addEventListener('click', (event) => {
     event.preventDefault(); // Prevenir la acción por defecto del enlace
@@ -47,10 +55,5 @@ deleteButtons.forEach(button => {
 
     console.log("Producto a eliminar con ID:", productId);
     socket.emit("delete product", productId)
-    // Aquí puedes hacer una llamada al servidor para eliminar el producto
-    // por ejemplo, usando fetch o axios:
-    // fetch(`/deleteProduct/${productId}`, { method: 'DELETE' })
-    //   .then(response => response.json())
-    //   .then(data => console.log(data));
   });
 });

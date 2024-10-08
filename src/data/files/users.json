@@ -5,20 +5,23 @@
     "userName": "mica",
     "rol": 0,
     "photo": "https://i.pinimg.com/474x/5a/1b/1e/5a1b1e32639c6210416804dc7a93ef8e.jpg",
-    "id": "725145b4a9c1be920c3335ee"
+    "id": "725145b4a9c1be920c3335ee",
+    "isActive": true
   },
   {
     "password": "asdfg",
     "userName": "mica",
     "rol": 0,
     "photo": "https://i.pinimg.com/474x/5a/1b/1e/5a1b1e32639c6210416804dc7a93ef8e.jpg",
-    "id": "797570cc8db3cd0ccefa7062"
+    "id": "797570cc8db3cd0ccefa7062",
+    "isActive": true
   },
   {
     "userName": "mica3",
     "rol": 3,
     "photo": "https://i.pinimg.com/474x/5a/1b/1e/5a1b1e32639c6210416804dc7a93ef8e.jpg",
-    "id": "0908f3bf6924dcadfb1949b1"
+    "id": "0908f3bf6924dcadfb1949b1",
+    "isActive": true
   },
   {
     "email": "anto@cob.com",
@@ -26,7 +29,8 @@
     "userName": "mica3",
     "rol": 1,
     "photo": "https://i.pinimg.com/474x/5a/1b/1e/5a1b1e32639c6210416804dc7a93ef8e.jpg",
-    "id": "d279f7c2fcedf73e5186d8ae"
+    "id": "d279f7c2fcedf73e5186d8ae",
+    "isActive": true
   },
   {
     "email": "ale@cob.com",
@@ -34,34 +38,47 @@
     "userName": "alec",
     "rol": 2,
     "photo": "https://i.pinimg.com/474x/5a/1b/1e/5a1b1e32639c6210416804dc7a93ef8e.jpg",
-    "id": "d4f72859d4b3ff8894bcd50f"
+    "id": "d4f72859d4b3ff8894bcd50f",
+    "isActive": true
   },
   {
     "userName": "alejandro",
     "email": "cobos@ale.com",
     "password": "98765",
     "photo": "",
-    "id": "558e9dc55cfa9e683bf0da0d"
+    "id": "558e9dc55cfa9e683bf0da0d",
+    "isActive": true
   },
   {
     "userName": "Micaela",
     "email": "cardozo@micaela.com",
     "password": "poiuy",
     "photo": "https://i.pinimg.com/474x/5a/1b/1e/5a1b1e32639c6210416804dc7a93ef8e.jpg",
-    "id": "f10d426a4365c66a14fddbf4"
+    "id": "f10d426a4365c66a14fddbf4",
+    "isActive": true
   },
   {
     "userName": "Pedro",
     "email": "ale@algo.com",
     "password": "zxcvb",
     "photo": "https://i.pinimg.com/474x/5a/1b/1e/5a1b1e32639c6210416804dc7a93ef8e.jpg",
-    "id": "47a4e0276c684069551a54b7"
+    "id": "47a4e0276c684069551a54b7",
+    "isActive": true
   },
   {
     "userName": "Pedro Miguel",
     "email": "pedro@miguel.com",
     "password": "1qaz2wsx",
     "photo": "",
-    "id": "919b91b586039b827d7730d3"
+    "id": "919b91b586039b827d7730d3",
+    "isActive": true
+  },
+  {
+    "userName": "aless",
+    "email": "aless@com.com",
+    "password": "asdf",
+    "photo": "",
+    "id": "c09ad7c1718b2f3463b1d61e",
+    "isActive": true
   }
 ]

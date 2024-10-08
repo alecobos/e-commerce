@@ -57,6 +57,7 @@ class UsersManager {
   async create(data) {
     try {
       data.id = crypto.randomBytes(12).toString("hex");
+      data.isActive = true;
       const all = await this.readAll();
       all.push(data);
       const stringAll = JSON.stringify(all, null, 2);
