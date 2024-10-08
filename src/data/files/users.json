@@ -72,13 +72,5 @@
     "photo": "",
     "id": "919b91b586039b827d7730d3",
     "isActive": true
-  },
-  {
-    "userName": "aless",
-    "email": "aless@com.com",
-    "password": "asdf",
-    "photo": "",
-    "id": "c09ad7c1718b2f3463b1d61e",
-    "isActive": true
   }
 ]

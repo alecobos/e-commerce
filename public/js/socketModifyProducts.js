@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const stockElement = document.querySelector("#stock");
     const pidElement = document.querySelector("#pid");
 
-    console.log("Title element:", titleElement);
-    console.log("Price element:", priceElement);
-    console.log("Category element:", categoryElement);
-    console.log("Photo element:", photoElement);
-    console.log("Stock element:", stockElement);
-    console.log("PID element:", pidElement);
+    console.log("Title element:", titleElement.value);
+    console.log("Price element:", priceElement.value);
+    console.log("Category element:", categoryElement.value);
+    console.log("Photo element:", photoElement.value);
+    console.log("Stock element:", stockElement.value);
+    console.log("PID element:", pidElement.value);
 
     if (titleElement && priceElement && categoryElement && stockElement && pidElement) {
         document.querySelector("#modify").addEventListener("click", () => {

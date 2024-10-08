@@ -2,10 +2,10 @@ const socket = io();
 
 document.querySelector("#create").addEventListener("click", ()=> {
     const title = document.querySelector("#title").value
-    const price = Number(document.querySelector("#price").value);
-    const category = document.querySelector("#category").value
-    const photo = document.querySelector("#photo").value
-    const stock = Number(document.querySelector("#stock").value);
+    let price = Number(document.querySelector("#price").value);
+    let category = document.querySelector("#category").value
+    let photo = document.querySelector("#photo").value
+    let stock = Number(document.querySelector("#stock").value);
     
     if (!stock) {
         stock = 1;

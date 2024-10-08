@@ -334,5 +334,13 @@
     "photo": "https://popular.com.sg/cdn/shop/products/ProductThumbnail_20f2bfbf-331f-46dc-b1b9-998f5aa55ee8.jpg?v=1672994445",
     "stock": 4,
     "id": "1e39d7eef956621f15ee5481"
+  },
+  {
+    "title": "Mouse new",
+    "price": 1,
+    "category": "Others",
+    "photo": "https://www.blogdelfotografo.com/wp-content/uploads/2020/12/producto_fondo_negro.webp",
+    "stock": 18,
+    "id": "c35c8058ffb5d4457cee0af1"
   }
 ]
