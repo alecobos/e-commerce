@@ -45,7 +45,7 @@
     "userName": "alejandro",
     "email": "cobos@ale.com",
     "password": "98765",
-    "photo": "",
+    "photo": "https://i.pinimg.com/474x/5a/1b/1e/5a1b1e32639c6210416804dc7a93ef8e.jpg",
     "id": "558e9dc55cfa9e683bf0da0d",
     "isActive": true
   },
@@ -63,14 +63,6 @@
     "password": "zxcvb",
     "photo": "https://i.pinimg.com/474x/5a/1b/1e/5a1b1e32639c6210416804dc7a93ef8e.jpg",
     "id": "47a4e0276c684069551a54b7",
-    "isActive": true
-  },
-  {
-    "userName": "Pedro Miguel",
-    "email": "pedro@miguel.com",
-    "password": "1qaz2wsx",
-    "photo": "",
-    "id": "919b91b586039b827d7730d3",
     "isActive": true
   }
 ]

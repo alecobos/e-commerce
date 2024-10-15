@@ -8,12 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const stockElement = document.querySelector("#stock");
     const pidElement = document.querySelector("#pid");
 
-    console.log("Title element:", titleElement.value);
-    console.log("Price element:", priceElement.value);
-    console.log("Category element:", categoryElement.value);
-    console.log("Photo element:", photoElement.value);
-    console.log("Stock element:", stockElement.value);
-    console.log("PID element:", pidElement.value);
 
     if (titleElement && priceElement && categoryElement && stockElement && pidElement) {
         document.querySelector("#modify").addEventListener("click", () => {
@@ -27,6 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
             const productData = { title, price, category, photo, stock, id: pid };
 
             console.log("Product data to be modified:", productData);
+            Swal.fire({
+                title: "Modified Product",
+                icon: "success"
+              });
             socket.emit("modify product", productData);
         });
     } else {
