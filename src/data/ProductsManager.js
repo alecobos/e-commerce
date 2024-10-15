@@ -17,24 +17,28 @@ class ProductsManager {
       console.log("file already exists");
     }
   }
+
   async readAll(category) {
     try {
       const data = await fs.promises.readFile(this.path, "utf-8");
       const parseData = JSON.parse(data);
-      //console.log(parseData);
-      if (category) {
-        const filteredData = parseData.filter(
-          (each) => each.category === category
-        );
-        return filteredData;
-      } else {
+
+      // Si la categoría es "All" o no hay categoría, devolver todos los productos
+      if (!category || category === "All") {
         return parseData;
       }
+
+      // Filtrar productos por categoría
+      const filteredData = parseData.filter(
+        (each) => each.category === category
+      );
+      return filteredData;
     } catch (error) {
       console.log(error);
       throw error;
     }
   }
+
   async read(id) {
     try {
       const all = await this.readAll();
@@ -48,6 +52,11 @@ class ProductsManager {
   async create(data) {
     try {
       data.id = crypto.randomBytes(12).toString("hex");
+
+      data.price = Number(data.price); // Asegurarse de que sea un número
+      data.stock = Number(data.stock); // Asegurarse de que sea un número
+
+
       const all = await this.readAll();
       all.push(data);
       const stringAll = JSON.stringify(all, null, 2);
@@ -81,7 +90,7 @@ class ProductsManager {
       const all = await this.readAll();
       const filteredProducts = all.filter((product) => product.id !== id);
       if (all.length === filteredProducts.length) {
-        return null
+        return null;
       }
       const stringAll = JSON.stringify(filteredProducts, null, 2);
       await fs.promises.writeFile(this.path, stringAll);

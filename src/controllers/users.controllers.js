@@ -103,4 +103,57 @@ const registerView = async (req, res, next) => {
   }
 }
 
-export { getAllUsers, getUser, createUser, updateUser, destroyUser, registerView };
+async function loginView(req, res, next) {
+  try {
+    const error = req.query.error; 
+    return res.render("login", { error }); 
+  } catch (error) {
+    return next(error);
+  }
+}
+
+
+async function loginUsers(req, res, next) {
+  try {
+    const { email, password } = req.body;
+    const user = await usersManager.readOneUserByEmail(email);
+
+    if (!user) {
+      return next(new Error("User not found"));
+    }
+
+    if (email === user.email && password === user.password) {
+      user.isOnline = true; 
+      const updateOnline = await usersManager.updateUser(user.id, { isOnline: true });
+
+      return res.redirect("/");
+    } else {
+      return res.redirect("/users/login?error=Invalid email or password");
+    }
+  } catch (error) {
+    return next(error);
+  }
+}
+
+async function showOneUser(req, res, next) {
+  //res es el objeto de respuesta a enviar al cliente
+  try {
+    const { uid } = req.params;
+    const response = await usersManager.read(uid);
+    //response es la respuesta que se espera del manager (para leer un producto)
+    if (response) {
+      return res.render("oneuser", { one: response })
+    } else {
+      const error = new Error("USER NOT FOUND");
+      error.statusCode = 404;
+      throw error;
+    }
+  } catch (error) {
+    return next(error);
+  }
+
+}
+
+
+
+export { getAllUsers, getUser, createUser, updateUser, destroyUser, registerView, showOneUser, loginView, loginUsers };

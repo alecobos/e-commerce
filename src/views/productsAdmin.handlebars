@@ -1,0 +1,46 @@
+<section class="text-light">
+  <form
+    action=""
+    class="d-flex flex-column w-50 justify-content-center align-items-center text-light"
+  >
+    <h1>Create New Product</h1>
+    <input class="w-50" type="text" name="title" id="title" placeholder="Title"/>
+    <input class="w-50 mt-1" type="number" name="price" id="price" placeholder="Price"/>
+    <input class="w-50 mt-1" type="text" name="category" id="category" placeholder="Category"/>
+    <input class="w-50 mt-1" type="text" name="photo" id="photo" placeholder="Photo"/>
+    <input class="w-50 mt-1" type="number" name="stock" id="stock" placeholder="Stock"/>
+    <input class="btn btn-outline-light mt-2" type="button" id="create" value="Create"/>
+  </form>
+</section>
+
+<table  id="productList">
+
+  {{#each products}}
+    <tr class="text-light">
+      <th>
+        <td class="ms-2" style="width: 7rem;">{{this.category}}</td>
+        <td class="mx-1 ms-2" style="width: 40rem;">{{this.title}}</td>
+        <td class="ms-2">Price: ${{this.price}}</td>
+        <td class="ms-2">Stock: {{this.stock}}</td>
+        <td class="ms-2">Id: {{this.id}}</td>
+        <td>
+            <a href="/products/admin/{{this.id}}" class="btn btn-outline-light mx-5 mb-2 ms-2">Modify</a>  
+        </td>
+        <td>
+            <a href="" class="btn btn-outline-light mx-5 mb-2 ms-2 delete-btn" id="delete" data-id="{{this.id}}">Delete</a>
+        </td>
+        
+      </th>
+    </tr>
+  {{/each}}
+</table>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="/public/js/socketProductAdmin.js"></script>
