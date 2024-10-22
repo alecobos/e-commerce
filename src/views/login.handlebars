@@ -1,5 +1,5 @@
 <form action="/users/login" method="POST" class="d-flex flex-column w-50 justify-content-center align-items-center">
-    <h1>Login</h1>
+    <h1 class="text-light">Login</h1>
 
     {{#if error}}
     <div class="alert alert-danger w-50 text-center">
@@ -10,5 +10,6 @@
     <input class="w-50 mt-1" type="email" name="email" id="email" placeholder="Email" required>
     <input class="w-50 mt-1" type="password" name="password" id="password" placeholder="Password" required>
     <button class="btn btn-outline-light mt-2" type="submit">Login</button>
-    <a href="/users/register" class="btn btn-outline-light mt-2">Register</a>
+    <p class="text-light mt-3">Don't have an account yet?</p>
+    <a href="/users/register" class="btn btn-outline-light">Register</a>
 </form>

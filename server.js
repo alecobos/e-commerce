@@ -11,6 +11,7 @@ import errorHandler from "./src/middlewares/errorHandler.mid.js";
 import pathHandler from "./src/middlewares/pathHandler.mid.js";
 import router from "./src/routers/index.router.js";
 import dbConnect from "./src/utils/dbConnect.utils.js";
+import session from 'express-session';
 
 
 try {
@@ -40,11 +41,20 @@ try {
   server.use(express.json()); // para trabajar rec.body
   server.use(cors());
   server.use("/public", express.static("public")); //para poder usar la carpeta public
+  
+  //sessions
+  server.use(session({
+    secret: 'tu_secreto',  // Cambia esto por una clave secreta
+    resave: false,         // No guarda la sesión en cada petición si no ha habido cambios
+    saveUninitialized: true, // Guarda una sesión nueva aunque no haya datos
+    cookie: { secure: true } // Usa true si el sitio está sobre HTTPS
+  }));
 
   //routers
   server.use(router);
   server.use(errorHandler);
   server.use(pathHandler);
+
 } catch (error) {
   console.log(error);
 }

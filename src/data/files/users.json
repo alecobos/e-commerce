@@ -64,15 +64,5 @@
     "photo": "https://i.pinimg.com/474x/5a/1b/1e/5a1b1e32639c6210416804dc7a93ef8e.jpg",
     "id": "47a4e0276c684069551a54b7",
     "isActive": true
-  },
-  {
-    "title": "Mouse Generic",
-    "price": 1,
-    "category": "Mouse",
-    "photo": "https://www.blogdelfotografo.com/wp-content/uploads/2020/12/producto_fondo_negro.webp",
-    "stock": 18,
-    "id": "b8ca76aafa6da46991378a93",
-    "isActive": true,
-    "role": null
   }
 ]
