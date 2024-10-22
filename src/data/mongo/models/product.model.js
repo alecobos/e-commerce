@@ -9,7 +9,7 @@ const schema = new Schema({
     default: "https://www.goodram.com/wp-content/uploads/0-998x960.png",
   },
   category: { type: String, default: "Other", index: true },
-  price: { type: Number, default: 1, min: 0, max: 1000 },
+  price: { type: Number, default: 1, min: 0, max: 10000 },
   stock: { type: Number, default: 1, min: 0 },
 
 });
