@@ -1,19 +1,29 @@
 import { Router } from "express";
 import isValidData from "../../middlewares/isValidData.mid.js";
 import {
-  getAllProducts,
-  getProduct,
-  createProduct,
-  updateProduct,
-  destroyProduct,
+  create,
+  destroy,
+  readAll,
+  paginate,
+  read,
+  update,
 } from "../../controllers/products.controller.js";
 
-const productsRouter = Router();
+const productsApiRouter = Router();
 
-productsRouter.get("/", getAllProducts);
-productsRouter.get("/:pid", getProduct);
-productsRouter.post("/", isValidData, createProduct);
-productsRouter.put("/:pid", updateProduct);
-productsRouter.delete("/:pid", destroyProduct);
+// productsRouter.get("/", readAll);
+// productsRouter.get("/:pid", read);
+// productsRouter.post("/", isValidData, create);
+// productsRouter.put("/:pid", update);
+// productsRouter.delete("/:pid", destroy);
 
-export default productsRouter;
+productsApiRouter.post("/", create);
+productsApiRouter.get("/", readAll);
+productsApiRouter.get("/paginate", paginate);
+// DECIDIR SI USAMOS READALL O PAGINATE
+productsApiRouter.get("/:pid", read);
+productsApiRouter.put("/:pid", update);
+productsApiRouter.delete("/:pid", destroy);
+
+
+export default productsApiRouter;

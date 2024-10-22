@@ -17,7 +17,7 @@ document.querySelector("#create").addEventListener("click", ()=> {
         category = "Others";
     }
     if (!photo) {
-        photo = "https://www.blogdelfotografo.com/wp-content/uploads/2020/12/producto_fondo_negro.webp";
+        photo = "https://www.goodram.com/wp-content/uploads/0-998x960.png";
     }
 
 
@@ -58,9 +58,7 @@ socket.on("refresh products", products => {
     document.getElementById("productList").innerHTML = productList;  
 });
 
-
 const deleteButtons = document.querySelectorAll('.delete-btn');
-
 
 deleteButtons.forEach(button => {
   button.addEventListener('click', (event) => {
@@ -88,12 +86,4 @@ deleteButtons.forEach(button => {
     
   });
 
-//   deleteButtons.forEach(button => {
-//     button.addEventListener('click', (event) => {
-//       event.preventDefault(); // Prevenir la acción por defecto del enlace
-//       const productId = button.getAttribute('data-id'); // Obtener el ID del producto
-  
-//       console.log("Producto a eliminar con ID:", productId);
-//       socket.emit("delete product", productId)
-//     });
 });
