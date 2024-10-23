@@ -1,12 +1,25 @@
 <section class="d-flex flex-wrap justify-content-evenly text-center">
-  <div class="card my-3 bg-black border-secondary text-light" style="width: 18rem;">
+  <div class="card my-3 bg-black border-secondary text-light" style="width: 18rem;" data-product-id="{{user.id}}">
     <h5 class="card-title">{{one.category}}</h5>
     <h5 class="card-title">{{one.title}}</h5>
     <img src="{{one.photo}}" class="card-img-top" alt="{{one.title}}" />
     <div class="card-body bg-dark border-top border-secondary border-1">
-      <p class="card-text ">Price: ${{one.price}}</p>
+      <p class="card-text" id="price">Price: ${{one.price}}</p>
       <p class="card-text">Stock: {{one.stock}}</p>
-      <a href="" class="btn btn-outline-light mx-5 mb-2">Buy</a>
+      <p class="card-text">Quantity: <input class="w-25 mt-1" type="number" name="quantity" id="quantity" /></p>
+      <a href="" class="btn btn-outline-light mx-5 mb-2" id="buy-now-btn">Buy</a>
     </div>
   </div>
 </section>
+
+<section class="d-flex flex-wrap justify-content-evenly text-center">
+  {{#if user}}
+    <!-- Campo oculto para el user_id -->
+    <input type="hidden" id="user-id" value="{{user.id}}" />
+    <h5 class="mt-3 text-light">User: {{user.email}}</h5>
+    <h5 class="mt-3 text-light" style="visibility: hidden;" id="user_id" >Id: {{user.id}}</h5>
+  {{/if}}
+</section>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script src="/public/js/socketCart.js"></script> 

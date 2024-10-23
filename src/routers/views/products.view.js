@@ -1,10 +1,5 @@
 import { Router } from "express";
 import productsMongoManager from "../../data/mongo/managers/product.mongo.js";
-// import {
-//   update,
-//   read,
-//   readAll,
-// } from "../../controllers/products.controller.js";
 
 const productsViewRouter = Router();
 
@@ -30,10 +25,14 @@ productsViewRouter.get("/admin", async (req, res, next) => {
 productsViewRouter.get("/:pid", async (req, res, next) => {
   try {
     const { pid } = req.params;
-    console.log("Product ID:", pid);
+
     const response = await productsMongoManager.read(pid);
     if (response) {
-      return res.render("oneproduct", { one: response });
+      const user = req.session.user;
+      return res.render("oneproduct", { 
+        one: response,   
+        user: user       
+      });
     } else {
       const error = new Error("NOT FOUND PRODUCT");
       error.statusCode = 404;

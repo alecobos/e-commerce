@@ -18,7 +18,7 @@ socket.on("filtered products", (products) => {
             <div class="card-body bg-dark border-top border-secondary border-1" style="height: 10rem;">
                 <p class="card-text">Price: $${product.price}</p>
                 <p class="card-text">Stock: ${product.stock}</p>
-                <a href="/products/${product.id}" class="btn btn-outline-light mx-5 mb-2">Comprar</a>
+                <a href="/products/${product._id}" class="btn btn-outline-light mx-5 mb-2">Buy</a>
             </div>
         </div>
     `).join("");

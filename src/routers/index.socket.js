@@ -1,6 +1,8 @@
 //import productsManager from "../data/ProductsManager.js";
 import productsMongoManager from "../data/mongo/managers/product.mongo.js";
 import usersManager from "../data/mongo/managers/user.manager.js";
+import cartsMongoManager from "../data/mongo/managers/cart.manager.js";
+//import usersMongoManager from "../data/mongo/managers/user.manager.js";
 
 const socketCb = async (socket) => {
   console.log("socket connected id: " + socket.id);
@@ -32,23 +34,6 @@ const socketCb = async (socket) => {
           success: true,
           user: user,
         });
-
-      //para acceder al usuario conectado, ver donde tiene que ir  
-      //   usersViewRouter.get('/dashboard', (req, res) => {
-      //     if (!req.session.user) {
-      //         return res.redirect('/login');
-      //     }
-      
-      //     // Usa los datos del usuario desde la sesión
-      //     res.render('dashboard', {
-      //         user: req.session.user,
-      //     });
-      // });
-
-
-
-        //const cart = await cartManager.readCartsByUserId(socket.userId);
-        //socket.emit("load cart", cart);
       }
     } catch (error) {
       console.error(error);
@@ -59,22 +44,30 @@ const socketCb = async (socket) => {
     }
   });
 
-
-  
+  //listener para un nuevo carrito
+  socket.on("new cart", async (data) => {
+    try {
+      console.log("entro a index.socket.js");
+      const id = await cartsMongoManager.create(data);
+      console.log("Carrito creado con ID:", id);
+    } catch (error) {
+      console.error("Error creando el carrito:", error);
+    }
+  });
 
   // Listener para el evento "search products"
   socket.on("search products", async (searchQuery) => {
-    console.log("Query recibido del cliente:", searchQuery); // Verificar el valor recibido
-  
+    //console.log("Query recibido del cliente:", searchQuery); // Verificar el valor recibido
+
     let filter = {};
-    
+
     if (searchQuery !== "All") {
       // Si no es "all", aplicamos el filtro por categoría
       filter = { category: { $regex: searchQuery, $options: "i" } };
     }
-  
+
     const filteredProducts = await productsMongoManager.readAll(filter);
-    console.log("Productos encontrados:", filteredProducts); // Verifica qué productos devuelve la consulta
+    //console.log("Productos encontrados:", filteredProducts); // Verifica qué productos devuelve la consulta
     socket.emit("filtered products", filteredProducts);
   });
 
@@ -107,8 +100,6 @@ const socketCb = async (socket) => {
       console.log("Product not found or failed to update");
     }
   });
-
 };
 
 export default socketCb;
-

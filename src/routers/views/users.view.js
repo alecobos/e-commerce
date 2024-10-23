@@ -24,8 +24,23 @@ usersViewRouter.get("/login", async (req, res, next) => {
     }
 });
 
+usersViewRouter.get("/profile", async (req, res, next) => {
+    try {
+        // Verifica si hay un usuario en la sesión
+        if (!req.session.user) {
+            return res.status(401).redirect('/users/login');  // Redirige al login si no hay usuario en sesión
+        }
 
-//nuevo
+        // Pasar los datos del usuario almacenados en la sesión a la vista
+        const user = req.session.user;
+        return res.render("oneuser", { one: user });
+    } catch (error) {
+        return next(error);
+    }
+});
+
+
+
 usersViewRouter.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
@@ -33,28 +48,37 @@ usersViewRouter.post('/login', async (req, res) => {
         // Buscar el usuario por email
         const user = await usersMongoManager.findUserByEmail(email);
         if (!user) {
-            return res.status(400).render('login', { error: 'Usuario no encontrado' });
+            return res.status(400).render('login', { error: 'User not found' });
         }
 
         // Comparar la contraseña (sin cifrado, ya que estás en pruebas)
         if (password !== user.password) {
-            return res.status(400).render('login', { error: 'Contraseña incorrecta' });
+            return res.status(400).render('login', { error: 'Wrong password' });
         }
 
-        // Almacenar la información del usuario en la sesión
+        // Almacenar la información del usuario en la sesión (incluyendo avatar y password)
         req.session.user = {
             id: user._id,
             email: user.email,
-            role: user.role,  // Puedes agregar más campos si lo deseas
+            avatar: user.avatar,  // Asumiendo que 'avatar' existe en el modelo del usuario
+            password: user.password,  // Solo para pruebas, no es recomendado almacenar la contraseña en la sesión
+            role: user.role
         };
 
-        // Redirigir a la página de éxito
-        res.redirect('/products/admin');
+        req.session.save((err) => {
+            if (err) {
+                console.error("Error al guardar la sesión:", err);
+                return res.status(500).render('login', { error: 'Error al guardar la sesión' });
+            }
+
+            res.redirect('/users/profile');
+        });
     } catch (error) {
         console.error(error);
         res.status(500).send('Error del servidor');
     }
 });
+
 
 
 export default usersViewRouter;

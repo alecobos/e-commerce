@@ -47,7 +47,7 @@ try {
     secret: 'tu_secreto',  // Cambia esto por una clave secreta
     resave: false,         // No guarda la sesión en cada petición si no ha habido cambios
     saveUninitialized: true, // Guarda una sesión nueva aunque no haya datos
-    cookie: { secure: true } // Usa true si el sitio está sobre HTTPS
+    cookie: { secure: false } // Usa true si el sitio está sobre HTTPS
   }));
 
   //routers
