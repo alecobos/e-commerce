@@ -60,6 +60,17 @@ class MongoManager {
       throw error;
     }
   };
+
+  findUserByEmail = async (email) => {
+    try {
+        const user = await this.model.findOne({ email });
+        return user;
+    } catch (error) {
+        throw error;
+    }
+  };
+
+
   calculateTotal = async (id) => {
     // sólo va a funcionar para carts!!!
     try {
