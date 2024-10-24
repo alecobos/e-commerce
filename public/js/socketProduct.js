@@ -3,7 +3,7 @@ const socket = io();
 // Capturar y enviar el parámetro de categoría de búsqueda
 document.querySelector("#search").addEventListener("click", () => {
     const selectedCategory = document.querySelector("#formSearch").value;
-    console.log("Categoría seleccionada:", selectedCategory); // Verificar valor capturado
+    //console.log("Categoría seleccionada:", selectedCategory); // Verificar valor capturado
     socket.emit("search products", selectedCategory); // Enviar la categoría al servidor
 });
 

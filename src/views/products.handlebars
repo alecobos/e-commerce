@@ -14,7 +14,7 @@
 </section>
 
 <article class="d-flex flex-wrap justify-content-evenly" id="productList">
-    {{#each products}}
+    {{#each products.docs}}
         <div class="card my-3 text-center text-light border-secondary bg-black" style="width: 18rem;">
             <h5 class="card-title">{{this.category}}</h5>
             <h5 class="card-title mx-1">{{this.title}}</h5>
@@ -27,6 +27,33 @@
         </div>
     {{/each}}
 </article>
+
+<div class="d-flex flex-wrap justify-content-end">
+    <div class="pagination text-end">
+        {{#if products.hasPrevPage}}
+            <a href="?page={{products.prevPage}}&limit={{products.limit}}" class="text-light mx-5">Prev</a>
+        {{/if}}
+        <p class="text-light">Page {{products.page}} of {{products.totalPages}}</p>
+        {{#if products.hasNextPage}}
+            <a href="?page={{products.nextPage}}&limit={{products.limit}}" class="text-light mx-5">Next</a>
+        {{/if}}
+    </div>
+</div>
+{{!--  esto funciona sin paginate
+<article class="d-flex flex-wrap justify-content-evenly" id="productList">
+    {{#each products}}
+        <div class="card my-3 text-center text-light border-secondary bg-black" style="width: 18rem;">
+            <h5 class="card-title">{{this.category}}</h5>
+            <h5 class="card-title mx-1">{{this.title}}</h5>
+            <img src="{{this.photo}}" class="card-img-top text-center mx-auto d-block" alt="{{this.title}}" style="height: 10rem; width: 15rem;">
+            <div class="card-body bg-dark border-top border-secondary border-1" style="height: 10rem;">
+                <p class="card-text">Price: ${{this.price}}</p>
+                <p class="card-text">Stock: {{this.stock}}</p>
+                <a href="/products/{{this._id}}" class="btn btn-outline-light mx-5 mb-2">Buy</a>
+            </div>
+        </div>
+    {{/each}}
+</article> --}}
 
 
 

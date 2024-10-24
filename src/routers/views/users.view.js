@@ -48,9 +48,9 @@ usersViewRouter.get("/profile", async (req, res, next) => {
         }
         //const carts = await cartsMongoManager.readAll();
         const user = req.session.user;
-        console.log("User ID:", user.id); // Verifica el user_id
+        //console.log("User ID:", user.id); // Verifica el user_id
         const carts = await cartsMongoManager.readAll({ user_id: user.id });
-        console.log(carts);
+        //console.log(carts);
         
         // Pasar los datos del usuario y los carts a la vista
         return res.render("oneuser", 

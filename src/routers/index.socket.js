@@ -55,7 +55,15 @@ const socketCb = async (socket) => {
     }
   });
 
-  // Listener para el evento "search products"
+    //listener para el evento "delete carts"
+    socket.on("delete cart", async (cid) => {
+      console.log("cid: ", cid);
+      console.log(await cartsMongoManager.destroy(cid));
+      //const allProducts = await productsMongoManager.readAll();
+      //socket.emit("refresh products", allProducts);
+    });
+
+  // // Listener para el evento "search products" funciona bien sin paginate
   socket.on("search products", async (searchQuery) => {
     //console.log("Query recibido del cliente:", searchQuery); // Verificar el valor recibido
 
@@ -70,6 +78,41 @@ const socketCb = async (socket) => {
     //console.log("Productos encontrados:", filteredProducts); // Verifica qué productos devuelve la consulta
     socket.emit("filtered products", filteredProducts);
   });
+  
+  
+  // Listener para el evento "search products"
+
+//   socket.on("search products", async (searchQuery, page = 1, limit = 10) => {
+//     //console.log("Query recibido del cliente:", searchQuery); // Verificar el valor recibido
+
+//     let filter = {};
+
+//     if (searchQuery !== "All") {
+//         // Si no es "all", aplicamos el filtro por categoría
+//         filter = { category: { $regex: searchQuery, $options: "i" } };
+//     }
+
+//     const opts = {
+//         page,
+//         limit,
+//         lean: true,
+//         sort: { createdAt: -1 } // Puedes ajustar el orden según tus necesidades
+//     };
+
+//     try {
+//         const result = await productsMongoManager.paginate(filter, opts);
+
+//         socket.emit("search results", {
+//             products: result.docs,
+//             totalPages: result.totalPages,
+//             currentPage: result.page
+//         });
+//     } catch (error) {
+//         console.error("Error al buscar productos:", error);
+//         socket.emit("search error", "Hubo un error al buscar productos.");
+//     }
+// });
+
 
   //listener para el evento "create products"
   socket.on("new product", async (data) => {

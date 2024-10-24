@@ -3,9 +3,24 @@ import productsMongoManager from "../../data/mongo/managers/product.mongo.js";
 
 const productsViewRouter = Router();
 
+// productsViewRouter.get("/", async (req, res, next) => {
+//   try {
+//     const products = await productsMongoManager.readAll();
+//     return res.render("products", { products });
+//   } catch (error) {
+//     return next(error);
+//   }
+// });
+
 productsViewRouter.get("/", async (req, res, next) => {
   try {
-    const products = await productsMongoManager.readAll();
+    const { page = 1, limit = 10 } = req.query;
+    const options = {
+      page: parseInt(page, 10),
+      limit: parseInt(limit, 10),
+      lean: true,
+    };
+    const products = await productsMongoManager.paginate({}, options);
     return res.render("products", { products });
   } catch (error) {
     return next(error);
