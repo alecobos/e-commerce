@@ -4,29 +4,34 @@
     <h5 class="card-title">{{one.email}}</h5>
     <img src="{{one.avatar}}" class="card-img-top" alt="User Avatar" />
     <div class="card-body bg-dark border-top border-secondary border-1">
-      <p class="card-text">Password: {{one.password}}</p>
-      <p class="card-text">Id: {{one.id}}</p>
-      <a href="" class="btn btn-outline-light mx-5 mb-2">Accept</a>
+      {{!-- <p class="card-text">Password: {{one.password}}</p> --}}
+      {{!-- <p class="card-text">Id: {{one.id}}</p> --}}
     </div>
   </div>
 </section>
 
 <h2 class="text-light">My Carts</h2>
 
-<table  id="cartList">
-
-  {{#each carts}}
-    <tr class="text-light">
-      <th>
-        <td class="ms-2" style="width: 7rem;">{{this.title}}</td>
-        <td class="mx-1 ms-2" style="width: 40rem;">{{this.quantity}}</td>
-        <td class="ms-2">Price: ${{this.price}}</td>
-        <td class="ms-2">Id: {{this._id}}</td>
-        <td>
-            <a href="" class="btn btn-outline-light mx-5 mb-2 ms-2 delete-btn" id="delete" data-id="{{this._id}}">Delete</a>
-        </td>
-        
-      </th>
-    </tr>
-  {{/each}}
+<table class="text-light text-center" id="cartList">
+      <thead>
+          <tr>
+              <th>Product</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>State</th>
+          </tr>
+      </thead>
+      <tbody>
+          {{#each carts}}
+          <tr>
+              <td>{{this.product_id.title}}</td>
+              <td>{{this.quantity}}</td>
+              <td>$ {{this.price}}</td>
+              <td>{{this.state}}</td>
+              <td>
+                <a href="" class="btn btn-outline-light mx-5 mb-2 ms-2 delete-btn" id="delete-cart" data-id="{{this._id}}">Delete</a>
+              </td>
+          </tr>
+          {{/each}}
+      </tbody>
 </table>

@@ -1,7 +1,6 @@
 import { Router } from "express";
 import usersMongoManager from "../../data/mongo/managers/user.manager.js";
-//nuevo
-import bcrypt from 'bcryptjs';
+import cartsMongoManager from "../../data/mongo/managers/cart.manager.js";
 
 
 const usersViewRouter = Router();
@@ -23,6 +22,23 @@ usersViewRouter.get("/login", async (req, res, next) => {
         return next(error);
     }
 });
+// Funciona bien sin cart!!!!
+// usersViewRouter.get("/profile", async (req, res, next) => {
+//     try {
+//         // Verifica si hay un usuario en la sesión
+//         if (!req.session.user) {
+//             return res.status(401).redirect('/users/login');  // Redirige al login si no hay usuario en sesión
+//         }
+//         const carts = await cartsMongoManager.readAll();
+//         // Pasar los datos del usuario almacenados en la sesión a la vista
+//         const user = req.session.user;
+//         return res.render("oneuser", 
+//             { one: user }
+//         );
+//     } catch (error) {
+//         return next(error);
+//     }
+// });
 
 usersViewRouter.get("/profile", async (req, res, next) => {
     try {
@@ -30,16 +46,20 @@ usersViewRouter.get("/profile", async (req, res, next) => {
         if (!req.session.user) {
             return res.status(401).redirect('/users/login');  // Redirige al login si no hay usuario en sesión
         }
-
-        // Pasar los datos del usuario almacenados en la sesión a la vista
+        //const carts = await cartsMongoManager.readAll();
         const user = req.session.user;
-        return res.render("oneuser", { one: user });
+        console.log("User ID:", user.id); // Verifica el user_id
+        const carts = await cartsMongoManager.readAll({ user_id: user.id });
+        console.log(carts);
+        
+        // Pasar los datos del usuario y los carts a la vista
+        return res.render("oneuser", 
+            { one: user, carts: carts },
+        );
     } catch (error) {
         return next(error);
     }
 });
-
-
 
 usersViewRouter.post('/login', async (req, res) => {
     const { email, password } = req.body;
