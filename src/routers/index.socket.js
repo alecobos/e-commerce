@@ -1,8 +1,7 @@
-//import productsManager from "../data/ProductsManager.js";
 import productsMongoManager from "../data/mongo/managers/product.mongo.js";
 import usersManager from "../data/mongo/managers/user.manager.js";
 import cartsMongoManager from "../data/mongo/managers/cart.manager.js";
-//import usersMongoManager from "../data/mongo/managers/user.manager.js";
+
 
 const socketCb = async (socket) => {
   console.log("socket connected id: " + socket.id);
@@ -59,11 +58,9 @@ const socketCb = async (socket) => {
     socket.on("delete cart", async (cid) => {
       console.log("cid: ", cid);
       console.log(await cartsMongoManager.destroy(cid));
-      //const allProducts = await productsMongoManager.readAll();
-      //socket.emit("refresh products", allProducts);
     });
 
-  // // Listener para el evento "search products" funciona bien sin paginate
+  // Listener para el evento "search products" funciona bien sin paginate
   socket.on("search products", async (searchQuery) => {
     //console.log("Query recibido del cliente:", searchQuery); // Verificar el valor recibido
 
