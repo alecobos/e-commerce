@@ -22,23 +22,7 @@ usersViewRouter.get("/login", async (req, res, next) => {
         return next(error);
     }
 });
-// Funciona bien sin cart!!!!
-// usersViewRouter.get("/profile", async (req, res, next) => {
-//     try {
-//         // Verifica si hay un usuario en la sesión
-//         if (!req.session.user) {
-//             return res.status(401).redirect('/users/login');  // Redirige al login si no hay usuario en sesión
-//         }
-//         const carts = await cartsMongoManager.readAll();
-//         // Pasar los datos del usuario almacenados en la sesión a la vista
-//         const user = req.session.user;
-//         return res.render("oneuser", 
-//             { one: user }
-//         );
-//     } catch (error) {
-//         return next(error);
-//     }
-// });
+
 
 usersViewRouter.get("/profile", async (req, res, next) => {
     try {

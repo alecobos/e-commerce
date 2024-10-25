@@ -15,24 +15,26 @@
 
 <table  id="productList">
 
-  {{#each products}}
-    <tr class="text-light">
-      <th>
-        <td class="ms-2" style="width: 7rem;">{{this.category}}</td>
-        <td class="mx-1 ms-2" style="width: 40rem;">{{this.title}}</td>
-        <td class="ms-2">Price: ${{this.price}}</td>
-        <td class="ms-2">Stock: {{this.stock}}</td>
-        <td class="ms-2">Id: {{this._id}}</td>
-        <td>
-            <a href="/products/admin/{{this._id}}" class="btn btn-outline-light mx-5 mb-2 ms-2">Modify</a>  
-        </td>
-        <td>
-            <a href="" class="btn btn-outline-light mx-5 mb-2 ms-2 delete-btn" id="delete" data-id="{{this._id}}">Delete</a>
-        </td>
-        
-      </th>
-    </tr>
-  {{/each}}
+      <tbody>
+        {{#each products}}
+          <tr class="text-light">
+            <th>
+              <td class="ms-2" style="width: 7rem;">{{this.category}}</td>
+              <td class="mx-1 ms-2" style="width: 40rem;">{{this.title}}</td>
+              <td class="ms-2">Price: ${{this.price}}</td>
+              <td class="ms-2">Stock: {{this.stock}}</td>
+              {{!-- <td class="ms-2">Id: {{this._id}}</td> --}}
+              <td>
+                  <a href="/products/admin/{{this._id}}" class="btn btn-outline-light mx-5 mb-2 ms-2">Modify</a>  
+              </td>
+              <td>
+                  <a href="" class="btn btn-outline-light mx-5 mb-2 ms-2 delete-btn" id="delete" data-id="{{this._id}}">Delete</a>
+              </td>
+              
+            </th>
+          </tr>
+        {{/each}}
+      </tbody>
 </table>
 
 
