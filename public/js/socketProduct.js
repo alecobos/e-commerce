@@ -2,10 +2,11 @@ const socket = io();
 
 // Capturar y enviar el parámetro de categoría de búsqueda
 document.querySelector("#search").addEventListener("click", () => {
-    const selectedCategory = document.querySelector("#formSearch").value; // Capturar la categoría seleccionada
-    console.log("Categoría seleccionada:", selectedCategory); // Agrega este log para verificar la categoría seleccionada
+    const selectedCategory = document.querySelector("#formSearch").value;
+    //console.log("Categoría seleccionada:", selectedCategory); // Verificar valor capturado
     socket.emit("search products", selectedCategory); // Enviar la categoría al servidor
 });
+
 
 // Recibir los productos filtrados desde el servidor y mostrarlos
 socket.on("filtered products", (products) => {
@@ -17,7 +18,7 @@ socket.on("filtered products", (products) => {
             <div class="card-body bg-dark border-top border-secondary border-1" style="height: 10rem;">
                 <p class="card-text">Price: $${product.price}</p>
                 <p class="card-text">Stock: ${product.stock}</p>
-                <a href="/products/${product.id}" class="btn btn-outline-light mx-5 mb-2">Comprar</a>
+                <a href="/products/${product._id}" class="btn btn-outline-light mx-5 mb-2">Buy</a>
             </div>
         </div>
     `).join("");

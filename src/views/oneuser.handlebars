@@ -1,12 +1,41 @@
 <section class="d-flex flex-wrap justify-content-evenly text-center">
   <div class="card my-3 bg-black border-secondary text-light" style="width: 18rem;">
-    <h5 class="card-title">{{one.userName}}</h5>
+    <h5 class="card-title">Welcome</h5>
     <h5 class="card-title">{{one.email}}</h5>
-    <img src="{{one.photo}}" class="card-img-top" alt="{{one.title}}" />
+    <img src="{{one.avatar}}" class="card-img-top" alt="User Avatar" />
     <div class="card-body bg-dark border-top border-secondary border-1">
-      <p class="card-text ">Password: {{one.password}}</p>
-      <p class="card-text ">Id: {{one.id}}</p>
-      <a href="" class="btn btn-outline-light mx-5 mb-2">Accept</a>
+      {{!-- <p class="card-text">Password: {{one.password}}</p> --}}
+      {{!-- <p class="card-text">Id: {{one.id}}</p> --}}
     </div>
   </div>
 </section>
+
+<h2 class="text-light text-center">My Carts</h2>
+
+<table class="text-light mt-5 mb-5" id="cartList">
+      <thead>
+          <tr>
+              <th>Product</th>
+              <th class="text-center">Quantity</th>
+              <th class="text-center">Price</th>
+              <th class="text-center">State</th>
+          </tr>
+      </thead>
+      <tbody>
+          {{#each carts}}
+          <tr>
+              <td class="mx-1" style="width: 80rem;">{{this.product_id.title}}</td>
+              <td class="text-center">{{this.quantity}}</td>
+              <td class="text-center" style="width: 8rem;">$ {{this.price}}</td>
+              <td class="text-center">{{this.state}}</td>
+              <td>
+                <a href="" class="btn btn-outline-light mx-5 mb-2 ms-2 delete-cart-btn" id="delete-cart" data-id="{{this._id}}">Delete</a>
+              </td>
+          </tr>
+          {{/each}}
+      </tbody>
+</table>
+
+
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="/public/js/socketProfile.js"></script>

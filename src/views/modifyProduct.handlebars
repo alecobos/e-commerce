@@ -1,22 +1,3 @@
-{{!-- <section class="d-flex flex-column text-center align-items-center">
-  <div class="card my-3 bg-black border-secondary text-light flex-column align-items-center" style="width: 27rem;">
-    <p class="card-title">Category</p>
-    <input class="w-75 mb-3" type="text" name="category" id="category" value="{{one.category}}">
-    <p class="card-title">Title</p>
-    <input class="w-75 mb-3" type="text" name="title" id="title" value="{{one.title}}">
-    <img src="{{one.photo}}" class="card-img-top" alt="{{one.title}}" />
-    <div class="card-body bg-dark border-top border-secondary border-1 d-flex flex-column align-items-center" style="width: 27rem;">
-      <p class="card-title">Price</p>
-      <input class="w-25 mb-3" type="numeric" name="price" id="price" value="{{one.price}}">
-      <p class="card-title">Stock</p>
-      <input class="w-25 mb-3" type="numeric" name="stock" id="stock" value="{{one.stock}}">
-      <input class="w-25 mb-3" type="numeric" name="pid" id="pid" value="{{one.id}}">
-      <a href="javascript:void(0);" class="btn btn-outline-light mx-5 mb-3" id="modify">Modify</a>
-    </div>
-  </div>
-</section> --}}
-
-
 <section class="d-flex flex-column text-center align-items-center">
   <div class="card my-3 bg-black border-secondary text-light flex-column align-items-center" style="width: 28rem;">
     <p class="card-title">Category</p>
@@ -31,8 +12,8 @@
       <input class="w-25 mb-3" type="numeric" name="price" id="price" value="{{one.price}}">
       <p class="card-title">Stock</p>
       <input class="w-25 mb-3" type="numeric" name="stock" id="stock" value="{{one.stock}}">
-      <input hidden class="w-25 mb-3" type="numeric" name="pid" id="pid" value="{{one.id}}">
-      <p hidden class="w-50 mb-3" type="numeric" name="pid" id="pid">{{one.id}} </p>
+      <input hidden class="w-25 mb-3" type="numeric" name="pid" id="pid" value="{{one._id}}">
+      <p hidden class="w-50 mb-3" type="numeric" name="pid" id="pid">{{one._id}} </p>
       <a href="javascript:void(0);" id="modify" class="btn btn-outline-light mx-5 mb-3">Modify</a>
     </div>
   </div>
